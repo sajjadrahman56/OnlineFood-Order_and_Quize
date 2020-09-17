@@ -1,20 +1,46 @@
 #include<stdio.h>
+#include <stdlib.h>
 
-int main()
+ void  main()
 {
-    printf("\n\n\n");
-    printf("Enter what kind of food you want \n\n\n\n\n");
+    int n ,i;
 
-    printf("\t1Breakfast  \t\t\t2.good NOon\n");
-    printf("\t3dupur  \t\t\t4.bikal\n");
-    printf("\t4.sonda  \t\t\t6.rait\n");
-    printf("\n\n\n\n\n\n\n\n");
-    printf("Press any key to go menu\n");
-    getch();
+    printf("\tpress - 1: alu \t\t press - 2: kodu\n");
+    printf("\n\tpress - 3: kumra \t\t press - 4: kira\n");
 
-    int n;
-    system("cls");
-     //printf("Press any key to go menu\n");
-      printf("sajad");
+    printf("\t\n\nEnter any number 1 - 3 : \n\n");
 
+    scanf("%d",&n);
+
+    switch(n)
+    {
+    case 1:
+        system("COLOR BC");
+        printf("\nprice = 100/-\nQuality =1\nDiscount = 25%\n");
+         getch();
+
+    case 2:
+        system("COLOR BC");
+        printf("\nprice = 200/-\nQuality =1\nDiscount = 25%\n");
+     getch();
+
+    case 3:
+        system("COLOR BC");
+        printf("\nprice = 300/-\nQuality =1\nDiscount = 25%\n");
+        getch();
+
+    case 4 :
+        printf("\n---------------\n");
+             for (i = 1 ; i <= 3 ; i++)
+             {
+                  if(n ==  1 || n ==  2 )
+                  {
+                      printf("\nsum = %d",300);
+                  }
+             }
+            getch();
+
+    default:
+        printf("\nWrong baba ji ");
+    }
 }
