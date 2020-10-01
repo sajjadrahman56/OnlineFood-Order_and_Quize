@@ -62,16 +62,16 @@ void menu1()
     case 2:
         afternoon();
         break;
-     case 3:
+    case 3:
         dinner();
         break;
-     case 4:
-         others();
+    case 4:
+        others();
         break;
-     case 5:
-         teaCoffee();
+    case 5:
+        teaCoffee();
         break;
-     case 6:
+    case 6:
         drinks();
         break;
     default:
@@ -102,7 +102,7 @@ void afternoon()
 }
 void dinner()
 {
-     printf("\n3.Dinner\n"
+    printf("\n3.Dinner\n"
            "25.Rice--------------------------------------------10/-\n"
            "26.Dal---------------------------------------------7/-\n"
            "27.Egg Curry---------------------------------------25/-\n"
@@ -114,7 +114,40 @@ void dinner()
            "33.Chicken Biriyani--------------------------------130/-\n"
            "34.Mutton Biriyani---------------------------------185/-\n");
 }
+void others()
+{
+    printf("\n"
+           "41.Naan--------------------------------------------15/-\n"
+           "42.Special Naan------------------------------------30/-\n"
+           "43.Chicken Grill(Full)-----------------------------225/-\n"
+           "44.Chicken Chap(Full)------------------------------210/-\n"
+           "45.Chicken BBQ(Full)-------------------------------240/-\n"
+          );
+}
+void teaCoffee()
+{
+    printf("\n"
+           "51.Tea---------------------------------------------15/-\n"
+           "52.Coffee------------------------------------------30/-\n"
+           "53.Cold Coffee-------------------------------------50/-\n"
+           "54.Special Coffee----------------------------------70/-\n"
+           "55.Special Lassi-----------------------------------25/-\n"
+           "56.Cold Drinks-------------------------------------20/-\n"
+          );
+}
 
+void drinks()
+{
+    printf("\n"
+           "57.Refresher Blaster-------------------------------160/-\n"
+           "58.Apple Blaster-----------------------------------160/-\n"
+           "59.Malta Blaster-----------------------------------170/-\n"
+           "60.Mango Blaster-----------------------------------170/-\n"
+           "61.Strawberry Blaster------------------------------180/-\n"
+           "62.Melon Blaster-----------------------------------200/-\n"
+           "63.Pine-apple Blaster------------------------------190/-\n"
+           "64.Chocolate Blaster-------------------------------200/-\n");
+}
 int getOrder()
 {
     //printf("\n\t\tGet Order \n");
@@ -148,7 +181,7 @@ void reviewOrder()
             printf("\nCode : %d\tPrice : %d\tQuty = %d\tproduct price: %d",i+1,price[i],productQuant[i],price[i]*productQuant[i]);
         }
     }
-    for(int i = 0 ; i < 8 ;i++)
+    for(int i = 0 ; i < 8 ; i++)
     {
         total +=price[i] * productQuant[i];
     }
@@ -157,8 +190,9 @@ void reviewOrder()
 
 void payment()
 {
-     int cash , change ;
-     do{
+    int cash, change ;
+    do
+    {
         printf("\nTotal Pay  = %d",total);
         printf("\nCash = ");
         scanf("%d",&cash);
@@ -170,7 +204,7 @@ void payment()
             break;
         }
 
-     }
-      while(1);
+    }
+    while(1);
 }
 
