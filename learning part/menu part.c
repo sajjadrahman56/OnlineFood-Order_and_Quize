@@ -6,6 +6,11 @@ void main()
 {
     printf("Ordering system \n");
     menu();
+
+    do{
+        orderRivew();
+    }while(1);
+    getch();
 }
 
 void menu()
@@ -30,8 +35,6 @@ void menu()
             largeNum = strlen(productName[i]);
         }
     }
-
-
     //printf("Large name = %d\n",largeNum);
 
     for (int i = 0 ; i < 5 ; i++)
@@ -46,9 +49,17 @@ void menu()
         printf("%d",price[i]);
     }
 
-
-
-
-
+printf("\n\n");
 }
+void orderRivew()
+{
+    printf("\n\nEnter food code\n");
 
+    int code , quantity;
+
+
+    printf("\nCode = ");
+    scanf("%d", &code);
+    printf("\nqua = ");
+    scanf("%d ", &quantity);
+}
