@@ -16,7 +16,7 @@ void payment();
 int main()
 {
     int  next;
-    printf("Welcome to  resturent\n\n\n");
+    printf("Welcome to Our resturent \n\n");
 
 
     do
