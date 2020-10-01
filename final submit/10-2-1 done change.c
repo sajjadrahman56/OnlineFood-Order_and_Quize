@@ -56,6 +56,18 @@ void menu1()
     case 2:
         afternoon();
         break;
+     case 3:
+        dinner();
+        break;
+     case 4:
+         others();
+        break;
+     case 5:
+         teaCoffee();
+        break;
+     case 6:
+        drinks();
+        break;
     default:
         printf("\nwrong input");
         printf("\n\nyou should be print code 0 for exixt\n");
