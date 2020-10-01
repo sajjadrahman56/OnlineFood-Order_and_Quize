@@ -7,8 +7,14 @@ int total ;
 
 void menu();
 void menu1();
+
 void morning();
 void afternoon();
+void dinner();
+void others();
+void teaCoffee();
+void drinks();
+
 int getOrder();
 void reviewOrder();
 void payment();
@@ -36,7 +42,7 @@ int main()
 void menu()
 {
     //printf("code\t\tname\t\tprice\n\n");
-    printf("\t1.Morning  \t\t2.Lunch\n\n");
+    printf("\t1.Morning  \t\t2.Afternoon\n\n");
     printf("\t3.Dinner  \t\t4.Others\n\n");
     printf("\t5.Tea & Coffee\t\t6.Drinks\n\n");
     //printf("\nEnter your food list ");
@@ -93,6 +99,20 @@ void afternoon()
            "9.Jorda-------------------------------------------25/-\n"
            "10.Sweets------------------------------------------30/-\n"
           );
+}
+void dinner()
+{
+     printf("\n3.Dinner\n"
+           "25.Rice--------------------------------------------10/-\n"
+           "26.Dal---------------------------------------------7/-\n"
+           "27.Egg Curry---------------------------------------25/-\n"
+           "28.Chicken Curry-----------------------------------80/-\n"
+           "29.Chicken Roast-----------------------------------85/-\n"
+           "30.Chicken Bhuna-----------------------------------140/-\n"
+           "31.Mutton Curry------------------------------------130/-\n"
+           "32.Mutton Bhuna------------------------------------140/-\n"
+           "33.Chicken Biriyani--------------------------------130/-\n"
+           "34.Mutton Biriyani---------------------------------185/-\n");
 }
 
 int getOrder()
