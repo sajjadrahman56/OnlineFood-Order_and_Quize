@@ -114,7 +114,7 @@ void reviewOrder()
     {
         if(productQuant[i]>0)
         {
-            printf("\nCode : %d\tPrice : %d\tQuty = %d\tsubtoal : %d",i+1,price[i],productQuant[i],price[i]*productQuant[i]);
+            printf("\nCode : %d\tPrice : %d\tQuty = %d\tproduct price: %d",i+1,price[i],productQuant[i],price[i]*productQuant[i]);
         }
     }
     for(int i = 0 ; i < 8 ;i++)
@@ -128,7 +128,7 @@ void payment()
 {
      int cash , change ;
      do{
-        printf("\nTotal = %d",total);
+        printf("\nTotal Pay  = %d",total);
         printf("\nCash = ");
         scanf("%d",&cash);
 
