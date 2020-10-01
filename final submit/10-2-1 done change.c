@@ -16,8 +16,9 @@ void payment();
 
 int main()
 {
-    int  next ;
-    printf("Welcome to Our resturent \n\n");
+    int  next;
+    printf("\n\n\t\t\tWelcome to my Team Bondo\n\n\n");
+
     do
     {
         menu();
@@ -28,18 +29,16 @@ int main()
         system("cls");
     }
     while(next);
-
     payment();
     getch();
 }
 
-
 void menu()
 {
     //printf("code\t\tname\t\tprice\n\n");
-    printf("1.\tSokal\t2.\tbikal\n");
-    printf("\n2\t\tMula\t\t300\n");
-    printf("\n3\t\tBurgur\t\t790\n");
+    printf("\t1.Morning  \t\t2.Lunch\n\n");
+    printf("\t3.Dinner  \t\t4.Others\n\n");
+    printf("\t5.Tea & Coffee\t\t6.Drinks\n\n");
     //printf("\nEnter your food list ");
 
 }
