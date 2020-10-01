@@ -121,7 +121,7 @@ void reviewOrder()
     {
         total +=price[i] * productQuant[i];
     }
-    printf("\n\tTotal = %d",total);
+    printf("\n\tYour Payment Total = %d",total);
 }
 
 void payment()
