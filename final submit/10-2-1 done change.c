@@ -13,12 +13,11 @@ int getOrder();
 void reviewOrder();
 void payment();
 
+
 int main()
 {
-    int  next;
+    int  next ;
     printf("Welcome to Our resturent \n\n");
-
-
     do
     {
         menu();
@@ -29,6 +28,7 @@ int main()
         system("cls");
     }
     while(next);
+
     payment();
     getch();
 }
@@ -86,9 +86,7 @@ void afternoon()
 
 int getOrder()
 {
-
     //printf("\n\t\tGet Order \n");
-
     int code, qut;
     printf("\n\ncode : ");
     scanf("%d",&code);
@@ -107,7 +105,6 @@ int getOrder()
         }
         return 1;
     }
-
 }
 
 void reviewOrder()
