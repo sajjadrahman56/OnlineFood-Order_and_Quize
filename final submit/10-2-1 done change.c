@@ -204,7 +204,6 @@ void payment()
             printf("\nChange = %d\n",change);
             break;
         }
-
     }
     while(1);
 }
