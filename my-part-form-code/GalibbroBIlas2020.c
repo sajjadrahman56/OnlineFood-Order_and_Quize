@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <string.h>
 #include <conio.h>
@@ -7,6 +6,7 @@ int order();
 int receive ();
 int display ();
 int items ();
+
 struct order
 {
     char name[50];
@@ -109,12 +109,16 @@ order_addition:                    //here used level
         }
     }
     char temp;
+
     printf ("Do you want to order anything else?(y/n)\n ");
+
     scanf("%c", &temp);
     if (temp == 'y' || temp == 'Y')
         goto order_addition  ; //  level
+
     printf ("\nNumber of food ordered %d\n", p[order_count].number_of_food);
     printf ("\nThank you %s for your order. Your bill is %d taka.\nPlease wait while we prepare the food.\n\n", p[order_count].name, p[order_count].cost);
+
     order_count ++;
 }
 int receive ()
