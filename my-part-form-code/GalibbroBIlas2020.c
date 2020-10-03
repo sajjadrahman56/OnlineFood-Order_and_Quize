@@ -18,10 +18,11 @@ struct order
 } p[10000];
 int order_count = 0, served_count = 0, waiting_now = 0;
 
+/*
 
 int main ()
 {
-    printf ("\t\t     Hungry Panda\n");
+    printf ("\t\t     Hungry Panda\n\n\n");
     while (1)
     {
         printf ("1. Order\n2. Serve\n3. Display \n4. Exit the program\n");
@@ -51,6 +52,41 @@ int main ()
     }
 }
 
+*/
+int main()
+{
+    printf("\n\n\t\t\tHello Galib Guy\n\n");
+    int galiv;
+    do
+    {
+        printf ("1. Order\n2. Serve\n3. Display \n4. Exit the program\n");
+        int in;
+        scanf ("%d", &in);
+        getchar ();
+        switch (in)
+        {
+        case 1 :
+        {
+            order ();
+            //nfo();
+            break;
+        }
+        case 2 :
+        {
+            receive();
+            break;
+        }
+        case 3 :
+        {
+            display();
+
+            break;
+        }
+
+        }
+    }
+    while(galiv);
+}
 int order()
 {
     int n, in, qu;
@@ -62,7 +98,7 @@ int order()
     p[order_count].cost = 0;
     p[order_count].number_of_food = 0;
 //nfo:
-   // nfo();
+    // nfo();
 
 order_addition:                    //here used level
     printf ("How many items you want to order? ");
@@ -126,7 +162,7 @@ order_addition:                    //here used level
         goto order_addition ;
     }
     //else
-       // goto nfo;
+    // goto nfo;
 
 
 
@@ -134,6 +170,13 @@ order_addition:                    //here used level
     printf ("\nThank you %s for your order. Your bill is %d taka.\nPlease wait while we prepare the food.\n\n", p[order_count].name, p[order_count].cost);
 
     order_count ++;
+    printf("\n\n\tDo you want to try anything\n");
+    int m;
+    scanf("%d",&m);
+    if(m == 1)
+        printf("\nI love 140615\n");
+    else
+        printf("\n\tWe are goru xuda\n");
 
 }
 int receive ()
@@ -150,7 +193,7 @@ int receive ()
     printf ("Enjoy your meal\n\n");
     served_count++;
 
-   // printf("\nyou must be wait 30 min , do you time pass just press 1 \n ");
+    // printf("\nyou must be wait 30 min , do you time pass just press 1 \n ");
 }
 int display ()
 {
@@ -163,9 +206,16 @@ int display ()
     int n ;
     scanf("%d",&n);
     if(n == 1)
-        printf("\n\tBabu kaiso");
-        printf("\n\tyes babu");
+        ofo();
+
+
+
 }
+void ofo()
+{
+    printf("\n\n\nHellow Sajjad bal \n");
+}
+
 int items ()
 {
     printf("\n\n..................................MENU....................................\n");
