@@ -158,7 +158,13 @@ int display ()
     printf ("Total number of order served %d\n", served_count);
     printf ("Number of Currently waiting to be served: %d\n", (order_count-served_count));
     printf ("Currently preparing food for order no. %d\n\n", p[served_count].order_number);
-    printf("\nyou must be wait 30 min , do you time pass just press 1 \n ");
+
+    printf("\n\nyou must be wait 30 min , do you time pass just press 1 \n ");
+    int n ;
+    scanf("%d",&n);
+    if(n == 1)
+        printf("\n\tBabu kaiso");
+        printf("\n\tyes babu");
 }
 int items ()
 {
