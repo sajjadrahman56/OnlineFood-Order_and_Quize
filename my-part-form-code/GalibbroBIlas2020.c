@@ -7,6 +7,8 @@ int receive ();
 int display ();
 int items ();
 
+void nfo();
+
 struct order
 {
     char name[50];
@@ -31,6 +33,7 @@ int main ()
         case 1 :
         {
             order ();
+            //nfo();
             break;
         }
         case 2 :
@@ -41,6 +44,7 @@ int main ()
         case 3 :
         {
             display();
+
             break;
         }
         }
@@ -57,6 +61,9 @@ int order()
     p[order_count].number_of_food = n;
     p[order_count].cost = 0;
     p[order_count].number_of_food = 0;
+//nfo:
+   // nfo();
+
 order_addition:                    //here used level
     printf ("How many items you want to order? ");
     scanf ("%d", &n);
@@ -113,13 +120,21 @@ order_addition:                    //here used level
     printf ("Do you want to order anything else?(y/n)\n ");
 
     scanf("%c", &temp);
+
     if (temp == 'y' || temp == 'Y')
-        goto order_addition  ; //  level
+    {
+        goto order_addition ;
+    }
+    //else
+       // goto nfo;
+
+
 
     printf ("\nNumber of food ordered %d\n", p[order_count].number_of_food);
     printf ("\nThank you %s for your order. Your bill is %d taka.\nPlease wait while we prepare the food.\n\n", p[order_count].name, p[order_count].cost);
 
     order_count ++;
+
 }
 int receive ()
 {
@@ -134,6 +149,8 @@ int receive ()
     printf ("Order no. %d by %s is ready\n", p[served_count].order_number, p[served_count].name);
     printf ("Enjoy your meal\n\n");
     served_count++;
+
+   // printf("\nyou must be wait 30 min , do you time pass just press 1 \n ");
 }
 int display ()
 {
@@ -141,6 +158,7 @@ int display ()
     printf ("Total number of order served %d\n", served_count);
     printf ("Number of Currently waiting to be served: %d\n", (order_count-served_count));
     printf ("Currently preparing food for order no. %d\n\n", p[served_count].order_number);
+    printf("\nyou must be wait 30 min , do you time pass just press 1 \n ");
 }
 int items ()
 {
@@ -163,5 +181,10 @@ int items ()
            "13.Rui Fish Curry------------------------1pice/2pice-------50/100-\n"
            "14.Katla Fish Curry----------------------1pice/2pice-------60/120-\n"
            "15.Pabda Fish Curry----------------------1pice/2pice-------50/-\n");
+}
+
+void nfo()
+{
+    printf("\n\t  I have a friend ship with ofo\n");
 }
 
