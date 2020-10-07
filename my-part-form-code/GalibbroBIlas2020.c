@@ -3,9 +3,9 @@
 #include <conio.h>
 
 int order();
-int receive ();
-int display ();
-int items ();
+int receive();
+int display();
+int items();
 
 void ofo();
 void nfo();
@@ -17,9 +17,10 @@ struct order
     int number_of_food;
     int cost;
 } p[10000];
+
 int order_count = 0, served_count = 0, waiting_now = 0;
 
-/*
+
 
 int main ()
 {
@@ -53,7 +54,7 @@ int main ()
     }
 }
 
-*/
+/*
 int main()
 {
     printf("\n\n\t\t\tHello Galib Guy\n\n");
@@ -63,7 +64,7 @@ int main()
         printf ("1. Order\n2. Serve\n3. Display \n4. Exit the program\n");
         int in;
         scanf ("%d", &in);
-        getchar ();
+        getchar();
         switch (in)
         {
         case 1 :
@@ -81,7 +82,6 @@ int main()
         {
             system("cls");
             display();
-
             break;
         }
 
@@ -89,6 +89,7 @@ int main()
     }
     while(galiv);
 }
+*/
 int order()
 {
     int n, in, qu;
@@ -135,14 +136,16 @@ order_addition:                    //here used level
             int i;
             scanf ("%d", &i);
             getchar();
+
             printf ("Please enter the quantity: ");
             scanf ("%d", &qu);
             getchar();
+
             p[order_count].number_of_food +=qu;
             if (i==1)
-                p[order_count].cost += (7*qu);
+                p[order_count].cost += (7 * qu);
             else
-                p[order_count].cost += (12*qu);
+                p[order_count].cost += (12 * qu);
             break;
         }
 
@@ -166,19 +169,35 @@ order_addition:                    //here used level
     //else
     // goto nfo;
 
-
+    system("cls");
 
     printf ("\nNumber of food ordered %d\n", p[order_count].number_of_food);
     printf ("\nThank you %s for your order. Your bill is %d taka.\nPlease wait while we prepare the food.\n\n", p[order_count].name, p[order_count].cost);
 
     order_count ++;
+
     printf("\n\n\tDo you want to try anything\n");
+
+     printf("\n\n\tDo you want to try anything\n");
     int m;
     scanf("%d",&m);
-    if(m == 1)
-        printf("\nI love 140615\n");
-    else
-        printf("\n\tWe are goru xuda\n");
+     switch(m)
+     {
+     case 1:
+        printf("\world legend\n");
+        break;
+     case 2:
+
+        printf("\n\nNah nah\n");
+        system("cls");
+
+     }
+
+
+}
+
+int legend()
+{
 
 }
 int receive ()
@@ -208,7 +227,11 @@ int display ()
     int n ;
     scanf("%d",&n);
     if(n == 1)
+    {
         ofo();
+        system("cls");
+        printf("\nHello ami nai\n");
+    }
     else
         nfo();
 
