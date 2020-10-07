@@ -7,6 +7,7 @@ int receive ();
 int display ();
 int items ();
 
+void ofo();
 void nfo();
 
 struct order
@@ -78,6 +79,7 @@ int main()
         }
         case 3 :
         {
+            system("cls");
             display();
 
             break;
@@ -207,14 +209,13 @@ int display ()
     scanf("%d",&n);
     if(n == 1)
         ofo();
+    else
+        nfo();
 
 
 
 }
-void ofo()
-{
-    printf("\n\n\nHellow Sajjad bal \n");
-}
+
 
 int items ()
 {
@@ -242,5 +243,40 @@ int items ()
 void nfo()
 {
     printf("\n\t  I have a friend ship with ofo\n");
-}
+    printf("\n\n\t\t\tHello Galib Guy\n\n");
+    int galiv;
+    do
+    {
+        printf ("1. Order\n2. Serve\n3. Display \n4. Exit the program\n");
+        int in;
+        scanf ("%d", &in);
+        getchar ();
+        switch (in)
+        {
+        case 1 :
+        {
+            order ();
+            //nfo();
+            break;
+        }
+        case 2 :
+        {
+            receive();
+            break;
+        }
+        case 3 :
+        {
+            display();
 
+            break;
+        }
+
+        }
+    }
+    while(galiv);
+}
+void ofo()
+{
+    printf("\n\n\nHellow Sajjad bal \n");
+
+}
