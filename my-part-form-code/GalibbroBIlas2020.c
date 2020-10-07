@@ -176,28 +176,16 @@ order_addition:                    //here used level
 
     order_count ++;
 
-    printf("\n\n\tDo you want to try anything\n");
-
-     printf("\n\n\tDo you want to try anything\n");
-    int m;
-    scanf("%d",&m);
-     switch(m)
-     {
-     case 1:
-        printf("\world legend\n");
-        break;
-     case 2:
-
-        printf("\n\nNah nah\n");
-        system("cls");
-
-     }
 
 
 }
 
+
 int legend()
 {
+
+mona:
+    printf("\jibon");
 
 }
 int receive ()
@@ -222,18 +210,37 @@ int display ()
     printf ("Total number of order served %d\n", served_count);
     printf ("Number of Currently waiting to be served: %d\n", (order_count-served_count));
     printf ("Currently preparing food for order no. %d\n\n", p[served_count].order_number);
+int a;
+
+
+
+
+
+
+
+
 
     printf("\n\nyou must be wait 30 min , do you time pass just press 1 \n ");
+
+    mona:printf("\nami amar");
+        scanf("%d",&a);
+        if(a == 1)
+            printf("\n\tovi\n");
+        else
+            printf("\data");
+
     int n ;
     scanf("%d",&n);
     if(n == 1)
     {
         ofo();
-        system("cls");
-        printf("\nHello ami nai\n");
+        goto mona;
+
     }
     else
-        nfo();
+        display ();
+
+
 
 
 
