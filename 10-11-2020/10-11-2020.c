@@ -2,6 +2,7 @@
 #include <string.h>
 #include <conio.h>
 
+
 int order();
 int receive ();
 int display ();
@@ -64,6 +65,7 @@ int order()
     p[order_count].cost = 0;
     p[order_count].number_of_food = 0;
 order_addition:                    //here used level
+
     printf ("How many items you want to order? ");
     scanf ("%d", &n);
     getchar ();
@@ -122,7 +124,7 @@ order_addition:                    //here used level
         goto order_addition  ; //  level
 
     printf ("\nNumber of food ordered %d\n", p[order_count].number_of_food);
-    printf("\nYou need minimum 10 min for your order . if you pass time pres 5\n");
+    printf("\nYou need minimum 10 min for your order .\n\t**********if you pass time pres 5\n");
 
     /*-- for extra part such as add time passing.. --*/
 
@@ -155,6 +157,7 @@ mona:
 */
     order_count ++;
 }
+
 int receive ()
 {
     if (order_count==0)
@@ -169,6 +172,7 @@ int receive ()
     printf ("Enjoy your meal\n\n");
     served_count++;
 }
+
 int display ()
 {
     printf("\t\tRight now your order list \n");
@@ -272,6 +276,7 @@ int sava()
             printf("\nworld rich people \n");
             printf("\n1.Millioner\t\t2.valpakna");
             printf("\npres - 1\n");
+
             int n;
             scanf("%d",&n);
             switch(n)
@@ -299,3 +304,4 @@ int sava()
 
     }
 }
+
