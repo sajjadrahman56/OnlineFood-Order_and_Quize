@@ -113,8 +113,26 @@ order_addition:                    //here used level
     if (temp == 'y' || temp == 'Y')
         goto order_addition  ; //  level
     printf ("\nNumber of food ordered %d\n", p[order_count].number_of_food);
+    printf("\nYou need minimum 10 min for your food");
     //printf ("\nThank you %s for your order. Your bill is %d taka.\nPlease wait while we prepare the food.\n\n", p[order_count].name, p[order_count].cost);
-
+    mona:
+        printf("\nsajjad");
+        printf("\n if you want to more just press 1 ");
+        int a;
+        scanf("%d",&a);
+        switch(a)
+        {
+        case 1:
+            system("cls");
+            printf("\njeva\n");
+            break;
+        case 2:
+            printf("\njegggggva\n");
+            break;
+        case 3:
+            printf("\njennnnnnnva\n");
+            break;
+        }
 
     order_count ++;
 }
@@ -138,6 +156,25 @@ int display ()
     printf ("Total number of order served %d\n", served_count);
     printf ("Number of Currently waiting to be served: %d\n", (order_count-served_count));
     printf ("Currently preparing food for order no. %d\n\n", p[served_count].order_number);
+
+    mona:
+        printf("\nsajjad");
+        printf("\n if you want to more just press 1 ");
+        int a;
+        scanf("%d",&a);
+        switch(a)
+        {
+        case 1:
+            system("cls");
+            printf("\njeva\n");
+            break;
+        case 2:
+            printf("\njegggggva\n");
+            break;
+        case 3:
+            printf("\njennnnnnnva\n");
+            break;
+        }
 }
 int items ()
 {
