@@ -113,7 +113,9 @@ order_addition:                    //here used level
     if (temp == 'y' || temp == 'Y')
         goto order_addition  ; //  level
     printf ("\nNumber of food ordered %d\n", p[order_count].number_of_food);
-    printf ("\nThank you %s for your order. Your bill is %d taka.\nPlease wait while we prepare the food.\n\n", p[order_count].name, p[order_count].cost);
+    //printf ("\nThank you %s for your order. Your bill is %d taka.\nPlease wait while we prepare the food.\n\n", p[order_count].name, p[order_count].cost);
+
+
     order_count ++;
 }
 int receive ()
@@ -159,4 +161,5 @@ int items ()
            "14.Katla Fish Curry----------------------1pice/2pice-------60/120-\n"
            "15.Pabda Fish Curry----------------------1pice/2pice-------50/-\n");
 }
+
 
