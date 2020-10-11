@@ -130,7 +130,10 @@ order_addition:                    //here used level
     scanf("%d",&ika);
     if(ika == 5)
         sava();
-/*    //printf ("\nThank you %s for your order. Your bill is %d taka.\nPlease wait while we prepare the food.\n\n", p[order_count].name, p[order_count].cost);
+    //else
+       // order();
+/*
+    //printf ("\nThank you %s for your order. Your bill is %d taka.\nPlease wait while we prepare the food.\n\n", p[order_count].name, p[order_count].cost);
 mona:
     printf("\nsajjad");
     printf("\n if you want to more just press 1 ");
