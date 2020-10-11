@@ -20,10 +20,10 @@ int main ()
 {
     printf ("\t\t     Hungry Panda\n");
 
-    printf ("\n1. Order\n2. Serve\n3. Display \n4. Exit the program\n");
+    //printf ("\n1. Order\n2. Serve\n3. Display \n4. Exit the program\n");
     while (1)
     {
-        //printf ("1. Order\n2. Serve\n3. Display \n4. Exit the program\n");
+        printf ("1. Order\n2. Serve\n3. Display \n4. Exit the program\n5.sakib\n");
         int in;
         scanf ("%d", &in);
         getchar ();
@@ -115,8 +115,8 @@ order_addition:                    //here used level
     if (temp == 'y' || temp == 'Y')
         goto order_addition  ; //  level
     printf ("\nNumber of food ordered %d\n", p[order_count].number_of_food);
-    printf("\nYou need minimum 10 min for your food");
-    //printf ("\nThank you %s for your order. Your bill is %d taka.\nPlease wait while we prepare the food.\n\n", p[order_count].name, p[order_count].cost);
+    printf("\nYou need minimum 10 min for your order . if you pass time pres 5\n");
+/*    //printf ("\nThank you %s for your order. Your bill is %d taka.\nPlease wait while we prepare the food.\n\n", p[order_count].name, p[order_count].cost);
 mona:
     printf("\nsajjad");
     printf("\n if you want to more just press 1 ");
@@ -135,7 +135,7 @@ mona:
         printf("\njennnnnnnva\n");
         break;
     }
-
+*/
     order_count ++;
 }
 int receive ()
@@ -155,7 +155,7 @@ int receive ()
 int display ()
 {
     printf("\t\tRight now your order list \n");
-    printf("\t\t*******************************");
+    printf("\t\t****************************");
     printf ("\n\t\tTotal order taken: %d\n", (order_count));
     printf ("\t\tTotal number of order served %d\n", served_count);
     printf ("\t\tNumber of Currently waiting to be served: %d\n", (order_count-served_count));
@@ -190,6 +190,7 @@ mona:
     scanf("%c", &temp);
     if (temp == 'O' || temp == '0')
         goto mona ;
+
 }
 int items ()
 {
