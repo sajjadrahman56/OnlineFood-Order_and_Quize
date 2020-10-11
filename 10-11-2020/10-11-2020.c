@@ -6,6 +6,9 @@ int order();
 int receive ();
 int display ();
 int items ();
+
+int sava();
+
 struct order
 {
     char name[50];
@@ -113,11 +116,17 @@ order_addition:                    //here used level
     }
     char temp;
     printf ("Do you want to order anything else?(y/n)\n ");
+
     scanf("%c", &temp);
     if (temp == 'y' || temp == 'Y')
         goto order_addition  ; //  level
+
     printf ("\nNumber of food ordered %d\n", p[order_count].number_of_food);
     printf("\nYou need minimum 10 min for your order . if you pass time pres 5\n");
+    int ika;
+    scanf("%d",&ika);
+    if(ika == 5)
+        sava();
 /*    //printf ("\nThank you %s for your order. Your bill is %d taka.\nPlease wait while we prepare the food.\n\n", p[order_count].name, p[order_count].cost);
 mona:
     printf("\nsajjad");
@@ -238,4 +247,47 @@ int items ()
            "15.Pabda Fish Curry----------------------1pice/2pice-------50/-\n");
 }
 
+int sava()
+{
 
+    printf("\nsajjad");
+    printf("\n if you want to more just press 1 ");
+
+    int a;
+    scanf("%d",&a);
+    system("cls");
+    switch(a)
+
+    {
+
+    case 1:
+            printf("\nworld rich people \n");
+            printf("\n1.Millioner\t\t2.valpakna");
+            printf("\npres - 1\n");
+            int n;
+            scanf("%d",&n);
+            switch(n)
+            {
+            case 1:
+                printf("\nmark jesop ota hota hokol gariya okol\n");
+                break;
+            case 2:
+                printf("\nSob bal paknar din ak kano\n");
+                break;
+            default:
+            system("cls");
+            }
+
+        break;
+    case 2:
+        system("cls");
+        printf("\njegggggva\n");
+        system("cls");
+        break;
+
+    case 3:
+        printf("\njennnnnnnva\n");
+        break;
+
+    }
+}
