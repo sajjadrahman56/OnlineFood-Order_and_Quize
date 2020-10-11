@@ -54,7 +54,9 @@ int order()
     printf ("please enter your name: ");
     gets (p[order_count].name);
     p[order_count].order_number = 10000+order_count;
+
     items();
+
     p[order_count].number_of_food = n;
     p[order_count].cost = 0;
     p[order_count].number_of_food = 0;
@@ -161,8 +163,6 @@ int display ()
     printf ("\t\tNumber of Currently waiting to be served: %d\n", (order_count-served_count));
     printf ("\t\tCurrently preparing food for order no. %d\n\n", p[served_count].order_number);
 
-
-
     char temp;
 mona:
     printf("\nsajjad");
@@ -170,26 +170,49 @@ mona:
 
     int a;
     scanf("%d",&a);
+    system("cls");
     switch(a)
 
     {
 
     case 1:
-            printf("\njega\n");
+            printf("\nworld rich people \n");
+            printf("\n1.Millioner\t\t2.valpakna");
+            printf("\npres - 1\n");
+            int n;
+            scanf("%d",&n);
+            switch(n)
+            {
+            case 1:
+                printf("\nmark jesop ota hota hokol gariya okol\n");
+                break;
+            case 2:
+                printf("\nSob bal paknar din ak kano\n");
+                break;
+            default:
+                goto mona ;
+
+            system("cls");
+            }
 
         break;
     case 2:
+        system("cls");
         printf("\njegggggva\n");
+        system("cls");
         break;
+
     case 3:
         printf("\njennnnnnnva\n");
         break;
+
     }
 
-    printf ("Do you want to order anything else?(y/n)\n ");
+   /* printf ("Do you want to order anything else?(y/n)\n ");
     scanf("%c", &temp);
     if (temp == 'O' || temp == '0')
         goto mona ;
+        */
 
 }
 int items ()
