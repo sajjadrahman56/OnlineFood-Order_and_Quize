@@ -123,6 +123,9 @@ order_addition:                    //here used level
 
     printf ("\nNumber of food ordered %d\n", p[order_count].number_of_food);
     printf("\nYou need minimum 10 min for your order . if you pass time pres 5\n");
+
+    /*-- for extra part such as add time passing.. --*/
+
     int ika;
     scanf("%d",&ika);
     if(ika == 5)
@@ -246,6 +249,8 @@ int items ()
            "14.Katla Fish Curry----------------------1pice/2pice-------60/120-\n"
            "15.Pabda Fish Curry----------------------1pice/2pice-------50/-\n");
 }
+
+/*create for */
 
 int sava()
 {
