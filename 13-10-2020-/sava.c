@@ -47,6 +47,35 @@ int main()
     case 2:
         system("cls");
         printf("\n\tWelcome to  The Entertainment world\n\n");
+
+        int v,b;
+        printf("\n\tHow many times you wanna see go over again!!( press 3-no limit)\n");
+        scanf("%d",&v);
+
+        char *namer[]= {"FOOTBALLAR","MOVIE","ONLINE GAME","tVSERIES"};
+        for(int i = 0 ; i < 4 ; i++)
+        {
+            printf("\t%d. = %s\t",i+1,namer[i]);
+        }
+
+        while(v--)
+        {
+
+
+            printf("\n\n\t\tchose one !!\n");
+            scanf("%d",&b);
+            switch(b)
+            {
+            case 1:
+                printf("\nBinakandi\n");
+                break;
+            case 2:
+                printf("\nRatargu\n");
+
+            default:
+                printf("\n\t\terror !! you limit our cross , go home");
+            }
+        };
         break;
 
     case 3:
