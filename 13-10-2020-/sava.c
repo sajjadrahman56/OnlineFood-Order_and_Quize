@@ -3,7 +3,7 @@ int main()
 {
     int n;
 
-    printf("\n\t1. Trip Advisor\t\t2. World News\t\t3. Best Books\n\n");
+    printf("\n\t1. Trip Advisor\t\t2. Entertainment\t\t3. Best Books\n\n");
     printf("\n\tEnter any number please : ");
 
     scanf("%d",&n);
@@ -28,16 +28,16 @@ int main()
         {
 
 
-            printf("\n\n\t\tchose one   !!\n");
+            printf("\n\n\t\tchose one !!\n");
             scanf("%d",&n);
             switch(n)
             {
             case 1:
-                printf("\nDhaka\n");
+                printf("\nBinakandi\n");
                 break;
             case 2:
-                printf("\nJalkati\n");
-                break;
+                printf("\nRatargu\n");
+
             default:
                 printf("\n\t\terror !! you limit our cross , go home");
             }
@@ -45,6 +45,7 @@ int main()
         break;
 
     case 2:
+        printf("")
         break;
 
     case 3:
