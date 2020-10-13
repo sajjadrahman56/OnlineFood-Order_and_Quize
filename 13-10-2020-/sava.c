@@ -10,6 +10,9 @@ int main()
     switch(n)
     {
         case 1:
+            printf("\nSanjida I love you ");
+            break;
     }
+
 
 }
