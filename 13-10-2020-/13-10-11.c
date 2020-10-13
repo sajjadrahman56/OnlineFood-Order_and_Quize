@@ -169,16 +169,20 @@ mona:
 
 int receive ()
 {
-    if (order_count==0)
+    system("cls");
+    if (order_count == 0)
     {
-        printf ("Please order first\n");
+        printf ("\n\tyou do not order anything Yet! \n\n\tPlease order first and stay with us\n");
+
+
     }
     else if (served_count == order_count)
     {
         printf ("All order served\n");
-    }
-    printf ("Order no. %d by %s is ready\n", p[served_count].order_number, p[served_count].name);
+        printf ("Order no. %d by %s is ready\n", p[served_count].order_number, p[served_count].name);
     printf ("Enjoy your meal\n\n");
+    }
+
     served_count++;
 }
 
@@ -280,6 +284,7 @@ int sava()
     int a;
     scanf("%d",&a);
     system("cls");
+    printf("\n\t1.nfo\t\t2.sava");
     switch(a)
 
     {
