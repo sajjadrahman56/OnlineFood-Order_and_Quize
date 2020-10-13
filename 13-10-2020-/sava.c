@@ -7,4 +7,9 @@ int main()
 
     scanf("%d",&n);
 
+    switch(n)
+    {
+        case 1:
+    }
+
 }
