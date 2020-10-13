@@ -52,6 +52,7 @@ int main ()
         }
         case 3 :
         {
+            //gotoxy(100,100);
             display();
             break;
         }
@@ -61,12 +62,12 @@ int main ()
 
 int order()
 {
-    gotoxy(10,10);
+    //gotoxy(10,10);
     int n, in, qu;
     printf ("please enter your name: ");
     gets (p[order_count].name);
     p[order_count].order_number = 10000+order_count;
-
+    //gotoxy(10,10);
     items();
 
     p[order_count].number_of_food = n;
@@ -183,9 +184,12 @@ int receive ()
 
 int display ()
 {
-    printf("\t\tRight now your order list \n");
-    printf("\t\t****************************");
-    printf ("\n\t\tTotal order taken: %d\n", (order_count));
+
+    printf("Right now your order list \n");
+    //gotoxy(10,10);
+    printf("****************************");
+    //gotoxy(10,10);
+    printf ("\nTotal order taken: %d\n", (order_count));
     printf ("\t\tTotal number of order served %d\n", served_count);
     printf ("\t\tNumber of Currently waiting to be served: %d\n", (order_count-served_count));
     printf ("\t\tCurrently preparing food for order no. %d\n\n", p[served_count].order_number);
