@@ -52,8 +52,8 @@ int main()
         printf("\n\tHow many times you wanna see go over again!!( press 3-no limit)\n");
         scanf("%d",&v);
 
-        char *namer[]= {"FOOTBALLAR","MOVIE","ONLINE GAME","tVSERIES"};
-        for(int i = 0 ; i < 4 ; i++)
+        char *namer[]= {"FOOTBALLAR","MOVIE","ONLINE GAME"};
+        for(int i = 0 ; i < 3 ; i++)
         {
             printf("\t%d. = %s\t",i+1,namer[i]);
         }
@@ -71,12 +71,16 @@ int main()
                 printf("\n\t\t***** Top 5 Footballer *****\n");
                 printf("\n\t\t*****************************\n");
 
-                char *nam[] = {"Cristiano Ronaldo","Neymar","Messi","Mabppe","Lawandoski"};
+                char *nam[] = {"Cristiano Ronaldo",
+                               "Neymar           ",
+                               "Messi            ",
+                               "Mabppe           ",
+                               "Lawandoski       "};
                 int salary[5]={90,65,43,23,12};
-                printf("\n\t\tNo \t\tname");
+                printf("\n\t\tNo \t\tname\t\tsalary(million $)\n");
                 for(m = 0 ; m <5 ;m++)
                 {
-                    printf("\n\t\t%d\t %s",m+1,nam[m]);
+                    printf("\n\t\t%d\t %s\t\t%d",m+1,nam[m],salary[m]);
                 }
 
                 break;
