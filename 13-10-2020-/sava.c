@@ -67,10 +67,32 @@ int main()
             switch(b)
             {
             case 1:
-                printf("\nBinakandi\n");
+                printf("\n\t\t*****************************\n");
+                printf("\n\t\t***** Top 5 Footballer *****\n");
+                printf("\n\t\t*****************************\n");
+
+                char *nam[] = {"Cristiano Ronaldo","Neymar","Messi","Mabppe","Lawandoski"};
+                int salary[5]={90,65,43,23,12};
+                printf("\n\t\tNo \t\tname");
+                for(m = 0 ; m <5 ;m++)
+                {
+                    printf("\n\t\t%d\t %s",m+1,nam[m]);
+                }
+
                 break;
             case 2:
-                printf("\nRatargu\n");
+                 printf("\n\t\t*****************************\n");
+                printf("\n\t\t***** Top 10 Footballer *****\n");
+                printf("\n\t\t*****************************\n");
+
+                char *Movinam[] = {"Cristiano Ronaldo","Neymar","Messi","Mabppe","Lawandoski"};
+                int pricedam[5]={90,65,43,23,12};
+                printf("\n\t\tNo \t\tname");
+                for(m = 0 ; m <5 ;m++)
+                {
+                    printf("\n\t\t%d\t %s",m+1,nam[m]);
+                }
+                printf("\n\n");
 
             default:
                 printf("\n\t\terror !! you limit our cross , go home");
