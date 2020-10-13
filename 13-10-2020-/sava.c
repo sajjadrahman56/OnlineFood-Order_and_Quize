@@ -12,16 +12,17 @@ int main()
     {
     case 1:
         system("cls");
+        printf("\n\tWelcome to Green Sylhet\n\n");
 
         int m,n;
         printf("\n\tHow many times you wanna see go over again!!( press 3-no limit)\n");
         scanf("%d",&m);
 
-        char *name[5]={"Bisnakndi","Ratargul","Jaflong","Dorgah","EidGah"};
-            for(int i = 0 ; i < 5 ; i++)
-            {
-                printf("\t%d. = %s",i,name[i]);
-            }
+        char *name[5]= {"Bisnakndi","Ratargul","Jaflong","Dorgah","EidGah"};
+        for(int i = 0 ; i < 5 ; i++)
+        {
+            printf("\t%d. = %s",i,name[i]);
+        }
 
         while(m--)
         {
@@ -41,9 +42,15 @@ int main()
                 printf("\n\t\terror !! you limit our cross , go home");
             }
         };
-
         break;
+
+    case 2:
+        break;
+
+    case 3:
+        break;
+    default:
+        printf("\n\tError 404 !! try again\n");
+
     }
-
-
 }
