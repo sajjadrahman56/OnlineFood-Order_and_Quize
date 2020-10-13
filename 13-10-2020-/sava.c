@@ -3,6 +3,7 @@ int main()
 {
     int n;
 
+    printf("\n\t1. Trip Advisor\t\t2. World News\t\t3. Best Books\n\n");
     printf("\n\tEnter any number please : ");
 
     scanf("%d",&n);
@@ -11,16 +12,22 @@ int main()
     {
     case 1:
         system("cls");
-        printf("\n\tSanjida I love you \n\n");
-        printf("\n\t1.tour\t\t2.kabar\t\t3.Sports\n\n");
 
         int m,n;
-        printf("\n\tchose one whatever you want !!\n");
+        printf("\n\tHow many times you wanna see go over again!!( press 3-no limit)\n");
         scanf("%d",&m);
+
+        char *name[5]={"Bisnakndi","Ratargul","Jaflong","Dorgah","EidGah"};
+            for(int i = 0 ; i < 5 ; i++)
+            {
+                printf("\t%d. = %s",i,name[i]);
+            }
 
         while(m--)
         {
-            printf("\n\t\tchose one   !!\n");
+
+
+            printf("\n\n\t\tchose one   !!\n");
             scanf("%d",&n);
             switch(n)
             {
