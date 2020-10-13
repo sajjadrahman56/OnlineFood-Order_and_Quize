@@ -180,7 +180,7 @@ int receive ()
     {
         printf ("All order served\n");
         printf ("Order no. %d by %s is ready\n", p[served_count].order_number, p[served_count].name);
-    printf ("Enjoy your meal\n\n");
+        printf ("Enjoy your meal\n\n");
     }
 
     served_count++;
@@ -278,13 +278,14 @@ int items ()
 int sava()
 {
 
-    printf("\nsajjad");
-    printf("\n if you want to more just press 1 ");
+    //printf("\nsajjad");
+    //printf("\n if you want to more just press 1 ");
 
     int a;
+     printf("\n\t1.nfo\t\t2.sava");
     scanf("%d",&a);
     system("cls");
-    printf("\n\t1.nfo\t\t2.sava");
+
     switch(a)
 
     {
