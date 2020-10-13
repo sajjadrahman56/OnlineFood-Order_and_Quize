@@ -10,7 +10,11 @@ int main()
     switch(n)
     {
         case 1:
-            printf("\nSanjida I love you ");
+            system("cls");
+            printf("\n\tSanjida I love you \n\n");
+            printf("\n\t1.tour\t\t2.kabar\t\t3.Sports\n\n");
+            int m;
+            printf("\n\tchose one whatever you want !!\n\n");
             break;
     }
 
