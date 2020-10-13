@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <conio.h>
+#include<windows.h>
 
 
 int order();
@@ -19,7 +20,13 @@ struct order
 } p[10000];
 int order_count = 0, served_count = 0, waiting_now = 0;
 
-
+void gotoxy(int x , int y)
+{
+    COORD a;
+    a.X = x;
+    a.Y = y;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),a);
+}
 int main ()
 {
     printf ("\t\t     Hungry Panda\n");
@@ -54,6 +61,7 @@ int main ()
 
 int order()
 {
+    gotoxy(10,10);
     int n, in, qu;
     printf ("please enter your name: ");
     gets (p[order_count].name);
@@ -183,7 +191,7 @@ int display ()
     printf ("\t\tCurrently preparing food for order no. %d\n\n", p[served_count].order_number);
 
     char temp;
-mona:
+ mona:
     printf("\nsajjad");
     printf("\n if you want to more just press 1 ");
 
