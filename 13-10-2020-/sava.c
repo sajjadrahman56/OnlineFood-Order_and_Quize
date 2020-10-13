@@ -45,7 +45,8 @@ int main()
         break;
 
     case 2:
-        printf("")
+        system("cls");
+        printf("\n\tWelcome to  The Entertainment world\n\n");
         break;
 
     case 3:
