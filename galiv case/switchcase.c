@@ -63,7 +63,7 @@ case 24 :
 
 case 25 :
         {
-            printf ("Enter the size of Rice: 1. half  2.full\n");
+            printf ("Enter the size of Dal: 1. half  2.full\n");
             int i;
             scanf ("%d", &i);
             getchar();
