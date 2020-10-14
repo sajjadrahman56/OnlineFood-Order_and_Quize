@@ -114,7 +114,7 @@ int dada()
                                "Lawandoski       "
                               };
                 int salary[5]= {90,65,43,23,12};
-                printf("\n\t\tNo \t\tname\t\tsalary(million $)\n");
+                printf("\n\t\tNo \t\tname\t\tsalary(million USD $)\n");
                 for(m = 0 ; m <5 ; m++)
                 {
                     printf("\n\t\t%d\t %s\t\t%d",m+1,nam[m],salary[m]);
@@ -126,8 +126,8 @@ int dada()
                 printf("\n\t\t***** Top 10 Footballer *****\n");
                 printf("\n\t\t*****************************\n");
 
-                char *Movinam[] = {"Cristiano Ronaldo","Neymar","Messi","Mabppe","Lawandoski"};
-                int pricedam[5]= {90,65,43,23,12};
+               // char *Movinam[] = {"Cristiano Ronaldo","Neymar","Messi","Mabppe","Lawandoski"};
+                //int pricedam[5]= {90,65,43,23,12};
                 printf("\n\t\tNo \t\tname");
                 for(m = 0 ; m <5 ; m++)
                 {
