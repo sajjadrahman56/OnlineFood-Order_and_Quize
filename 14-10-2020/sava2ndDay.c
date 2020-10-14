@@ -35,10 +35,7 @@ int dada()
             printf("\t%d. = %s",i+1,name[i]);
         }
         printf("\n");
-        for(int i = 3 ; i < 6 ; i++)
-        {
-            printf("\t%d. = %s",i+1,name[i]);
-        }
+
 
         while(m--)
         {
@@ -49,6 +46,7 @@ int dada()
             switch(n)
             {
             case 1:
+                printf("\n1.Park\t2.Place\t3.others");
                 printf("\nBinakandi\n");
                 break;
             case 2:
