@@ -107,15 +107,20 @@ int dada()
                 printf("\n\t\t***** Top 5 Footballer *****\n");
                 printf("\n\t\t*****************************\n");
 
-                char *nam[] = {"Cristiano Ronaldo",
-                               "Neymar           ",
-                               "Messi            ",
-                               "Mabppe           ",
-                               "Lawandoski       "
+                char *nam[] = {"Lionel Messi     ",
+                               "Cristiano Ronaldo",
+                               "Neymar jr        ",
+                               "K. Mbappe        ",
+                               "M. Salah         ",
+                               "Paul Pogba       ",
+                               "Griezman         ",
+                               "Greate Bale      ",
+                               "De Maria         ",
+                               "David de Gea     "
                               };
-                int salary[5]= {90,65,43,23,12};
-                printf("\n\t\tNo \t\tname\t\tsalary(million USD $)\n");
-                for(m = 0 ; m <5 ; m++)
+                int salary[10]= {126,117,108,42,37,35,33,29,26,22};
+                printf("\n\t\tNo \t\tname\t\tsalary(million USD($))\n");
+                for(m = 0 ; m <10 ; m++)
                 {
                     printf("\n\t\t%d\t %s\t\t%d",m+1,nam[m],salary[m]);
                 }
