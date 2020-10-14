@@ -408,4 +408,25 @@ case 41 :
         p[order_count].cost += (110 * qu);
     break;
 }
+case 42 :
+{
+    printf ("Enter the size of Vegetable fried rice : 1. quater  2.full\n");
+    int i;
+    scanf ("%d", &i);
+    getchar();
+
+    printf ("Please enter the quantity: ");
+    scanf ("%d", &qu);
+    getchar();
+
+    p[order_count].number_of_food += qu;
+
+    if (i==1)
+        p[order_count].cost += (60 * qu);
+
+    else
+        p[order_count].cost += (240 * qu);
+    break;
+}
+
 
