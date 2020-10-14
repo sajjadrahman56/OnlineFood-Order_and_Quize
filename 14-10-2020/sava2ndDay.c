@@ -104,7 +104,7 @@ int dada()
             {
             case 1:
                 printf("\n\t\t*****************************\n");
-                printf("\n\t\t***** Top 5 Footballer *****\n");
+                printf("\n\t\t|----- Top 10 Footballer -----|\n");
                 printf("\n\t\t*****************************\n");
 
                 char *nam[] = {"Lionel Messi     ",
@@ -129,9 +129,9 @@ int dada()
                 break;
 
             case 2:
-                printf("\n\t\t*****************************\n");
-                printf("\n\t\t***** Top 10 Footballer *****\n");
-                printf("\n\t\t*****************************\n");
+                printf("\n\t\t************************************\n");
+                printf("\n\t\t|----- All Time Best 10 Movies -----|\n");
+                printf("\n\t\t*************************************\n");
 
                // char *Movinam[] = {"Cristiano Ronaldo","Neymar","Messi","Mabppe","Lawandoski"};
                 //int pricedam[5]= {90,65,43,23,12};
@@ -149,6 +149,9 @@ int dada()
         break;
 
     case 3:
+           system("cls");
+        printf("\n\tWelcome Book Lover to the zone...!!\n\n");
+
 
         break;
     default:
