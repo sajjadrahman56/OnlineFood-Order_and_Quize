@@ -125,7 +125,7 @@ case 27 :
 
 case 28 :
         {
-            printf ("Enter the size of Chicken curry: 1. half  2.full\n");
+            printf ("Enter the size of Chicken Roast: 1. half  2.full\n");
             int i;
             scanf ("%d", &i);
             getchar();
@@ -141,5 +141,25 @@ case 28 :
 
             else
                 p[order_count].cost += (150 * qu);
+            break;
+        }
+case 29 :
+        {
+            printf ("Enter the size of Chicken Buna: 1. half  2.full\n");
+            int i;
+            scanf ("%d", &i);
+            getchar();
+
+            printf ("Please enter the quantity: ");
+            scanf ("%d", &qu);
+            getchar();
+
+            p[order_count].number_of_food += qu;
+
+            if (i==1)
+                p[order_count].cost += (85 * qu);
+
+            else
+                p[order_count].cost += (160 * qu);
             break;
         }
