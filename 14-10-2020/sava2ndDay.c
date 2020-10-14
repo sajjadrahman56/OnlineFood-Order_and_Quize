@@ -133,15 +133,15 @@ int dada()
                 printf("\n\t\t|----- All Time Best 10 Movies -----|\n");
                 printf("\n\t\t*************************************\n");
 
-               // char *Movinam[] = {"Cristiano Ronaldo","Neymar","Messi","Mabppe","Lawandoski"};
-                //int pricedam[5]= {90,65,43,23,12};
-                //printf("\n\t\tNo \t\tname");
-                /*for(m = 0 ; m < ; m++)
-                {
-                    printf("\n\t\t%d\t %s",m+1,nam[m]);
-                }
-                printf("\n\n");
-                */
+            // char *Movinam[] = {"Cristiano Ronaldo","Neymar","Messi","Mabppe","Lawandoski"};
+            //int pricedam[5]= {90,65,43,23,12};
+            //printf("\n\t\tNo \t\tname");
+            /*for(m = 0 ; m < ; m++)
+            {
+                printf("\n\t\t%d\t %s",m+1,nam[m]);
+            }
+            printf("\n\n");
+            */
             default:
                 printf("\n\t\terror !! you limit our cross , go home");
             }
@@ -149,11 +149,74 @@ int dada()
         break;
 
     case 3:
-           system("cls");
+        system("cls");
         printf("\n\tWelcome Book Lover to the zone...!!\n\n");
 
 
+        int q,w;
+
+        scanf("%d",&q);
+        printf("\n");
+
+
+        char *bookNam[] = {"Don Quixote                               ",
+                       "Xinhuan Zidian                            ",
+                       "A Tale Of Two Cities                      ",
+                       "The Lord Of The Rings                     ",
+                       "The Little Prince                         ",
+                       "Harry Poter                               ",
+                       "And Then There Were None                  ",
+                       "Dream Of The Red Chember                  ",
+                       "The Hobbit                                ",
+                       "The Lion The Witch & The Wardorbe         "
+                      };
+        int copySold[10]= {500,400,200,150,142,120,100,100,100,85};
+
+        printf("\n\t\tNo \t\tBook Name\t\t\tCopy sold(Million)\n");
+
+        for(m = 0 ; m <10 ; m++)
+        {
+            printf("\n\t\t%d\t %s\t\t%d\n",m+1,bookNam[m],copySold[m]);
+        }
+
+        while(q--)
+        {
+            printf("\n\t\tNo \t\tBook Name\t\tCopy sold(Million)\n");
+            printf("\n\n\tchose one !!\n");
+            scanf("%d",&n);
+            switch(n)
+            {
+            case 1:
+                /*
+                {
+                    printf("\n\t%d = %s\t\t%d = %s\n",o+1,naturePark[o],o+2,naturePark[o+1]);
+                    printf("\n\t%d = %s\t\t%d = %s\n",o+3,naturePark[o+2],o+4,naturePark[o+3]);
+                    printf("\n\t%d = %s\t\t%d = %s\n",o+5,naturePark[o+4],o+6,naturePark[o+5]);
+                    printf("\n\t%d = %s\t\t%d = %s\n",o+7,naturePark[o+6],o+8,naturePark[o+7]);
+                    printf("\n\t%d = %s\t\t%d = %s\n",o+9,naturePark[o+8],o+10,naturePark[o+9]);
+
+                }
+                */
+                for(int m = 0 ; m < 10; m++)
+                {
+                    printf("\n\t%d = %s\n",m+1,naturePark[m]);
+                }
+
+                break;
+
+            case 2:
+                for(int o = 0 ; o < 12; o++)
+                {
+                    printf("\n\t%d = %s\n",o+1,others[o]);
+                }
+                break;
+
+            default:
+                printf("\nWrong  input\n");
+            }
+        };
         break;
+
     default:
         printf("\n\tError 404 !! try again\n");
 
