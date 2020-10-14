@@ -119,7 +119,8 @@ int dada()
                                "David de Gea     "
                               };
                 int salary[10]= {126,117,108,42,37,35,33,29,26,22};
-                printf("\n\t\tNo \t\tname\t\tsalary(million USD($))\n");
+
+                printf("\n\t\tNo \t\tName\t\tSalary(Million usd $)\n");
                 for(m = 0 ; m <10 ; m++)
                 {
                     printf("\n\t\t%d\t %s\t\t%d",m+1,nam[m],salary[m]);
