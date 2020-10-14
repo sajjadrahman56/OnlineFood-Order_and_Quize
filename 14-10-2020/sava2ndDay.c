@@ -29,10 +29,15 @@ int dada()
         printf("\n\tHow many times you wanna see go over again!!( press 3-no limit)\n");
         scanf("%d",&m);
 
-        char *name[5]= {"Bisnakndi","Ratargul","Jaflong","Dorgah","EidGah"};
-        for(int i = 0 ; i < 5 ; i++)
+        char *name[]= {"Khadim Park","Bisnakndi","Ratargul","Jaflong","Dorgah","EidGah"};
+        for(int i = 0 ; i < 3 ; i++)
         {
-            printf("\t%d. = %s",i,name[i]);
+            printf("\t%d. = %s",i+1,name[i]);
+        }
+        printf("\n");
+        for(int i = 3 ; i < 6 ; i++)
+        {
+            printf("\t%d. = %s",i+1,name[i]);
         }
 
         while(m--)
