@@ -30,40 +30,52 @@ int dada()
         scanf("%d",&m);
         printf("\n");
 
-        char *name[]= {" N A T U R E and  P A R K "," O T H E R S "};
+        /*char *name[]= {" N A T U R E and  P A R K "," O T H E R S "};
 
         for(int i = 0 ; i < 2 ; i++)
         {
             printf("\t%d. = %s\t\t",i+1,name[i]);
         }
+        */
+
         char *naturePark[]= {"Ratargul Swamp Forest","Bisnakandi\t\t","Jaflong\t\t","Lalakhal\t\t","Khadimnagar National Park","Tilagor Eco Park\t","Sreemangol Tea Garden","Madavkundo\t\t","Malnichara Tea state","Lakkatura Tea Garden"};
 
         char *others[] = {"Shahi Edgah","Shajalal Mazar","Surma Bridge","Kadir Bazar Bridge","King Bridge and Ali Amzad clock","Pantumai Waterfall","Rema-kalenga Wildlife","Adventure World","Osmani Museum","Osmani Park","Dreamlend","Jakariya City"};
+
         while(m--)
         {
-            printf("\n\n\t\tchose one !!\n");
+            printf("\n\n\t\t1.  N A T U R E and  P A R K  \t2. O T H E R S ");
+            printf("\n\n\tchose one !!\n");
             scanf("%d",&n);
             switch(n)
             {
             case 1:
-                //char *naturePark[]={"Ratargul Swamp Forest","Bisnakandi","Jaflong","Lalakhal","Khadimnagar National Park","Tilagor Eco Park","Sreemangol Tea Garden","Madavkundo","Malnichara Tea state","Lakkatura Tea Garden"};
-                for(int k = 0 ; k < 12; k++)
+                /*
                 {
-                    printf("\n\t%d = %s\n",k+1,naturePark[k]);
+                    printf("\n\t%d = %s\t\t%d = %s\n",o+1,naturePark[o],o+2,naturePark[o+1]);
+                    printf("\n\t%d = %s\t\t%d = %s\n",o+3,naturePark[o+2],o+4,naturePark[o+3]);
+                    printf("\n\t%d = %s\t\t%d = %s\n",o+5,naturePark[o+4],o+6,naturePark[o+5]);
+                    printf("\n\t%d = %s\t\t%d = %s\n",o+7,naturePark[o+6],o+8,naturePark[o+7]);
+                    printf("\n\t%d = %s\t\t%d = %s\n",o+9,naturePark[o+8],o+10,naturePark[o+9]);
+
                 }
+                */
+                for(int m = 0 ; m < 10; m++)
+                {
+                    printf("\n\t%d = %s\n",m+1,naturePark[m]);
+                }
+
                 break;
 
             case 2:
-                /*for(int o = 0 ; o < 12; o++)
+                for(int o = 0 ; o < 12; o++)
                 {
-                    printf("\n\t%d = %s\t\t%d = %s\n",o+1,naturePark[o],o+2,naturePark[o+1]);
-                }*
-                printf("\n");
-
+                    printf("\n\t%d = %s\n",o+1,others[o]);
+                }
                 break;
 
             default:
-                printf("\n\t\terror !! you limit our cross , go home");
+                printf("\nWrong  input\n");
             }
         };
         break;
