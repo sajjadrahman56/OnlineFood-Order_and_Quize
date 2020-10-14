@@ -491,6 +491,26 @@ case 45:
     break;
 }
 
+case 46:
+{
+    printf ("Enter the size of  Coffee: 1. 250 mg  2. 500 mg\n");
+    int i;
+    scanf ("%d", &i);
+    getchar();
+
+    printf ("Please enter the quantity: ");
+    scanf ("%d", &qu);
+    getchar();
+
+    p[order_count].number_of_food += qu;
+
+    if (i==1)
+        p[order_count].cost += (10 * qu);
+
+    else
+        p[order_count].cost += (35 * qu);
+    break;
+}
 
 
 
