@@ -19,13 +19,13 @@ int main()
     printf("\n4.Others\n"
            "35.Naan---------------------------------half/full-----------15/25-\n"
            "36.Special Naan-------------------------half/full-----------20/40-\n"
-           "37.Chicken Grill--------------------------Full--------------225/-\n"
-           "38.Chicken Chap---------------------------Full--------------210/-\n"
-           "39.Chicken BBQ----------------------------Full--------------240/-\n"
+           "37.Chicken Grill--------------------------half/full----------180/350\n"
+           "38.Chicken Chap---------------------------half/full--------------155/210\n"
+           "39.Chicken BBQ----------------------------half/full--------------120/240/-\n"
            "40.Chicken Tikka-------------------------half/full----------100/180-\n"
            "41.Chicken Korai---------------------------Full-------------110/-\n"
            "42.Vegetable Fried Rice-----------------quater/full---------60/130-\n"
-           "43.Chicken Fried Rice-------------------quater/full---------120/-\n");
+           "43.Chicken Fried Rice-------------------quater/full---------120/480-\n");
 
 
     printf("\n5.Tea & Drinks\n"
@@ -303,5 +303,25 @@ case 36 :
 
             else
                 p[order_count].cost += (40 * qu);
+            break;
+        }
+case 37 :
+        {
+            printf ("Enter the size of   Chicken Grill : 1. half  2.full\n");
+            int i;
+            scanf ("%d", &i);
+            getchar();
+
+            printf ("Please enter the quantity: ");
+            scanf ("%d", &qu);
+            getchar();
+
+            p[order_count].number_of_food += qu;
+
+            if (i==1)
+                p[order_count].cost += (180 * qu);
+
+            else
+                p[order_count].cost += (350 * qu);
             break;
         }
