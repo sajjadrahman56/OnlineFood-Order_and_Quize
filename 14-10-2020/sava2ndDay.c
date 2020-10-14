@@ -28,13 +28,14 @@ int dada()
         int m,n;
         printf("\n\tHow many times you wanna see go over again!!( press 3-no limit)\n");
         scanf("%d",&m);
+        printf("\n");
 
-        char *name[]= {"Khadim Park","Bisnakndi","Ratargul","Jaflong","Dorgah","EidGah"};
+        char *name[]= {" VISITING SIGHT "," P A R K "," O T H E R S "};
         for(int i = 0 ; i < 3 ; i++)
         {
             printf("\t%d. = %s",i+1,name[i]);
         }
-        printf("\n");
+
 
 
         while(m--)
@@ -46,7 +47,7 @@ int dada()
             switch(n)
             {
             case 1:
-                printf("\n1.Park\t2.Place\t3.others");
+
                 printf("\nBinakandi\n");
                 break;
             case 2:
