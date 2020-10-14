@@ -37,6 +37,8 @@ int dada()
             printf("\t%d. = %s\t\t",i+1,name[i]);
         }
         char *naturePark[]={"Ratargul Swamp Forest","Bisnakandi","Jaflong","Lalakhal","Khadimnagar National Park","Tilagor Eco Park","Sreemangol Tea Garden","Madavkundo","Malnichara Tea state","Lakkatura Tea Garden"};
+
+        char *others[] ={"Shahi Edgah","Shajalal Mazar","Surma Bridge","Kadir Bazar Bridge","King Bridge and Ali Amzad clock","Pantumai Waterfall","Rema-kalenga Wildlife","Adventure World","Osmani Museum","Osmani Park","Dreamlend","Jakariya City"};
         while(m--)
         {
             printf("\n\n\t\tchose one !!\n");
@@ -51,6 +53,7 @@ int dada()
                 }
                 break;
             case 2:
+
                 printf("\nRatargu\n");
                 break;
             default:
