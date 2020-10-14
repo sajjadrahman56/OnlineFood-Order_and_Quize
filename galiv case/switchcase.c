@@ -116,7 +116,7 @@ case 27 :
             p[order_count].number_of_food +=qu;
 
             if (i==1)
-                p[order_count].cost += (80*qu);
+                p[order_count].cost += (80 * qu);
 
             else
                 p[order_count].cost += (135 * qu);
