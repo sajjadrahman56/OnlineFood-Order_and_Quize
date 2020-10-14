@@ -30,29 +30,26 @@ int dada()
         scanf("%d",&m);
         printf("\n");
 
-        char *name[]= {" VISITING SIGHT "," P A R K "," O T H E R S "};
-        for(int i = 0 ; i < 3 ; i++)
+        char *name[]= {" N A T U R E and  P A R K "," O T H E R S "};
+
+        for(int i = 0 ; i < 2 ; i++)
         {
-            printf("\t%d. = %s",i+1,name[i]);
+            printf("\t%d. = %s\t\t",i+1,name[i]);
         }
-
-
 
         while(m--)
         {
-
-
             printf("\n\n\t\tchose one !!\n");
             scanf("%d",&n);
             switch(n)
             {
             case 1:
+                char *naturePark[]={"Ratargul Swamp Forest","Bisnakandi","Jaflong","Lalakhal","Khadimnagar National Park","Tilagor Eco Park","Sreemangol Tea Garden","Madavkundo","Malnichara Tea state","Lakkatura Tea Garden"};
 
-                printf("\nBinakandi\n");
                 break;
             case 2:
                 printf("\nRatargu\n");
-
+                break;
             default:
                 printf("\n\t\terror !! you limit our cross , go home");
             }
