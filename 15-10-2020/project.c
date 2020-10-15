@@ -23,20 +23,19 @@ int dada()
     {
     case 1:
         system("cls");
-        printf("\n\tWelcome to Green Sylhet\n\n");
+
+        printf("\n\n\n");
+
+        printf("\n\t\t\t\t************************************************\n");
+        printf("\n\t\t\t\t|----Welcome to EVER GREEN SYLHET ...!!----|\n");
+        printf("\n\t\t\t\t************************************************\n");
+
+        printf("\n\n\n\\tHow many times you wanna see it  go over again!!( press 3-no limit)\n");
 
         int m,n;
-        printf("\n\tHow many times you wanna see go over again!!( press 3-no limit)\n");
+
         scanf("%d",&m);
         printf("\n");
-
-        /*char *name[]= {" N A T U R E and  P A R K "," O T H E R S "};
-
-        for(int i = 0 ; i < 2 ; i++)
-        {
-            printf("\t%d. = %s\t\t",i+1,name[i]);
-        }
-        */
 
         char *naturePark[]= {"Ratargul Swamp Forest","Bisnakandi\t\t","Jaflong\t\t","Lalakhal\t\t","Khadimnagar National Park","Tilagor Eco Park\t","Sreemangol Tea Garden","Madavkundo\t\t","Malnichara Tea state","Lakkatura Tea Garden"};
 
@@ -44,22 +43,13 @@ int dada()
 
         while(m--)
         {
-            printf("\n\n\t\t1.  N A T U R E and  P A R K  \t2. O T H E R S ");
+            printf("\n\n\n\t\t1.  N A T U R E and  P A R K  \t2. O T H E R S ");
             printf("\n\n\tchose one !!\n");
             scanf("%d",&n);
             switch(n)
             {
             case 1:
-                /*
-                {
-                    printf("\n\t%d = %s\t\t%d = %s\n",o+1,naturePark[o],o+2,naturePark[o+1]);
-                    printf("\n\t%d = %s\t\t%d = %s\n",o+3,naturePark[o+2],o+4,naturePark[o+3]);
-                    printf("\n\t%d = %s\t\t%d = %s\n",o+5,naturePark[o+4],o+6,naturePark[o+5]);
-                    printf("\n\t%d = %s\t\t%d = %s\n",o+7,naturePark[o+6],o+8,naturePark[o+7]);
-                    printf("\n\t%d = %s\t\t%d = %s\n",o+9,naturePark[o+8],o+10,naturePark[o+9]);
-
-                }
-                */
+                system("cls");
                 for(int m = 0 ; m < 10; m++)
                 {
                     printf("\n\t%d = %s\n",m+1,naturePark[m]);
@@ -68,6 +58,7 @@ int dada()
                 break;
 
             case 2:
+                system("cls");
                 for(int o = 0 ; o < 12; o++)
                 {
                     printf("\n\t%d = %s\n",o+1,others[o]);
@@ -75,20 +66,29 @@ int dada()
                 break;
 
             default:
-                printf("\nWrong  input\n");
+                printf("\n\n\t\t\tWrong  input -----!!!!\n");
+                printf("\n\t\t\tPlease input between 1 - 2\n");
             }
         };
         break;
 
     case 2:
         system("cls");
-        printf("\n\n\t\tWelcome to The Entertainment world\n\n");
+
+        printf("\n\n\n");
+
+        printf("\n\t\t\t\t************************************************\n");
+        printf("\n\t\t\t\t|----Welcome to The Entertainment world...!!----|\n");
+        printf("\n\t\t\t\t************************************************\n");
+
+        printf("\n\n\n\\tHow many times you wanna see it  go over again!!( press 3-no limit)\n");
 
         int v,b;
-        printf("\n\tHow many times you wanna see go over again!!( press 3-no limit)\n");
+
         scanf("%d",&v);
 
         char *namer[]= {"FOOTBALLAR","MOVIE","ONLINE GAME"};
+
         for(int i = 0 ; i < 3 ; i++)
         {
             printf("\t%d. = %s\t",i+1,namer[i]);
@@ -103,6 +103,8 @@ int dada()
             switch(b)
             {
             case 1:
+                system("cls");
+
                 printf("\n\t\t*****************************\n");
                 printf("\n\t\t|----- Top 10 Footballer -----|\n");
                 printf("\n\t\t*****************************\n");
@@ -151,6 +153,8 @@ int dada()
                 break;
 
             case 3:
+                system("cls");
+
                 printf("\n\t\t*****************************\n");
                 printf("\n\t\t|----- Top 10 On-line Game -----|\n");
                 printf("\n\t\t*****************************\n");
@@ -168,7 +172,7 @@ int dada()
                                      };
                 int year[10]= {2018,2017,2019,2009,2014,2012,2011,2015,2019,2015};
 
-                printf("\n\t\tNo \t\t  Game Name\t\t\t\t\tLunched Year\n");
+                printf("\n\t\tNo \t\t  Game Name\t\t\t\t   Lunched Year\n");
 
                 for(m = 0 ; m <10 ; m++)
                 {
@@ -184,8 +188,14 @@ int dada()
 
     case 3:
         system("cls");
-        printf("\n\tWelcome Book Lover to the zone...!!\n\n");
-        printf("\n\tHow many times you wanna see go over again!!( press 3-no limit)\n");
+
+        printf("\n\n\n");
+
+        printf("\n\t\t\t\t************************************************\n");
+        printf("\n\t\t\t\t|----- Welcome Book Lover to the zone...!!-----|\n");
+        printf("\n\t\t\t\t************************************************\n");
+
+        printf("\n\n\n\\tHow many times you wanna see it  go over again!!( press 3-no limit)\n");
 
         int q,w;
 
@@ -207,26 +217,34 @@ int dada()
         int copySold[10]= {500,400,200,150,142,120,100,100,100,85};
 
 
-
+        char *BanglaBookNam[] = {"Shesher Kobitha and Gura                      ",
+                                 "Prodush Pakritojon                            ",
+                                 "Luhokopat                                     ",
+                                 "Ontorlina                                     ",
+                                 "Khuabnama                                     ",
+                                 "Shun Bor Nari                                 ",
+                                 "Kobi                                          ",
+                                 "Tobu o akdin                                  ",
+                                 "Lalshalu                                      ",
+                                 "Hazar Bosor Dore                             "
+                                };
         while(q--)
         {
-            printf("\n\t1.All Time Top 10 Best Selling Book\t\t2.Bangla Literature\n");
+            printf("\n\n\t1.All Time Top 10 Best Selling Book\t\t2.Bangla Literature\n");
             printf("\n\n\tchose one !!\n");
             scanf("%d",&n);
             switch(n)
             {
             case 1:
-                /*
-                {
-                    printf("\n\t%d = %s\t\t%d = %s\n",o+1,naturePark[o],o+2,naturePark[o+1]);
-                    printf("\n\t%d = %s\t\t%d = %s\n",o+3,naturePark[o+2],o+4,naturePark[o+3]);
-                    printf("\n\t%d = %s\t\t%d = %s\n",o+5,naturePark[o+4],o+6,naturePark[o+5]);
-                    printf("\n\t%d = %s\t\t%d = %s\n",o+7,naturePark[o+6],o+8,naturePark[o+7]);
-                    printf("\n\t%d = %s\t\t%d = %s\n",o+9,naturePark[o+8],o+10,naturePark[o+9]);
+                system("cls");
 
-                }
-                */
+                printf("\n\t\t\t\t*************************************\n");
+                printf("\n\t\t\t\t|----- All time 10 Best Selling -----|\n");
+                printf("\n\t\t\t\t**************************************\n");
+
+
                 //printf("\n\t\tNo \t\tBook Name\t\tCopy sold(Million)\n");
+
                 printf("\n\t\tNo \t\tBook Name\t\t\t\tCopy sold(Million)\n");
 
                 for(m = 0 ; m <10 ; m++)
@@ -237,9 +255,14 @@ int dada()
                 break;
 
             case 2:
-                for(int o = 0 ; o < 12; o++)
+                system("cls");
+
+                printf("\n\t\t\t\t*************************************\n");
+                printf("\n\t\t\t\t|-----   Top 10 Bangla Novel   -----|\n");
+                printf("\n\t\t\t\t**************************************\n");
+                for(int o = 0 ; o < 10; o++)
                 {
-                    printf("\n\t%d = %s\n",o+1,others[o]);
+                    printf("\n\t\t%d = %s\n",o+1,BanglaBookNam[o]);
                 }
                 break;
 
