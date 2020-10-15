@@ -82,7 +82,7 @@ int dada()
 
     case 2:
         system("cls");
-        printf("\n\tWelcome to  The Entertainment world\n\n");
+        printf("\n\n\t\tWelcome to The Entertainment world\n\n");
 
         int v,b;
         printf("\n\tHow many times you wanna see go over again!!( press 3-no limit)\n");
@@ -129,6 +129,7 @@ int dada()
                 break;
 
             case 2:
+                system("cls");
                 printf("\n\t\t************************************\n");
                 printf("\n\t\t|----- All Time Best 10 Movies -----|\n");
                 printf("\n\t\t*************************************\n");
@@ -172,16 +173,11 @@ int dada()
                           };
         int copySold[10]= {500,400,200,150,142,120,100,100,100,85};
 
-        printf("\n\t\tNo \t\tBook Name\t\t\t\tCopy sold(Million)\n");
 
-        for(m = 0 ; m <10 ; m++)
-        {
-            printf("\n\t\t%d\t %s\t\t%d\n",m+1,bookNam[m],copySold[m]);
-        }
 
         while(q--)
         {
-            printf("\n\t\tNo \t\tBook Name\t\tCopy sold(Million)\n");
+            printf("\n\t1.All Time Top 10 Best Selling Book\t\t2.Bangla Literature\n");
             printf("\n\n\tchose one !!\n");
             scanf("%d",&n);
             switch(n)
@@ -197,9 +193,12 @@ int dada()
 
                 }
                 */
-                for(int m = 0 ; m < 10; m++)
+                //printf("\n\t\tNo \t\tBook Name\t\tCopy sold(Million)\n");
+                printf("\n\t\tNo \t\tBook Name\t\t\t\tCopy sold(Million)\n");
+
+                for(m = 0 ; m <10 ; m++)
                 {
-                    printf("\n\t%d = %s\n",m+1,naturePark[m]);
+                    printf("\n\t\t%d\t %s\t\t%d\n",m+1,bookNam[m],copySold[m]);
                 }
 
                 break;
