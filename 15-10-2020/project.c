@@ -130,19 +130,52 @@ int dada()
 
             case 2:
                 system("cls");
-                printf("\n\t\t************************************\n");
-                printf("\n\t\t|----- All Time Best 10 Movies -----|\n");
-                printf("\n\t\t*************************************\n");
 
-            // char *Movinam[] = {"Cristiano Ronaldo","Neymar","Messi","Mabppe","Lawandoski"};
-            //int pricedam[5]= {90,65,43,23,12};
-            //printf("\n\t\tNo \t\tname");
-            /*for(m = 0 ; m < ; m++)
-            {
-                printf("\n\t\t%d\t %s",m+1,nam[m]);
-            }
-            printf("\n\n");
-            */
+                printf("\n\t\t\t\t************************************\n");
+                printf("\n\t\t\t\t|----- All Time Best 10 Movies -----|\n");
+                printf("\n\t\t\t\t*************************************\n\n\n");
+
+
+                printf("\n\t\t\tNo\t\tMovie name\n");
+                printf("\n\t\t\t1\t\tInception\n");
+                printf("\n\t\t\t2\t\tTitanic\n");
+                printf("\n\t\t\t3\t\tLone Survivor\n");
+                printf("\n\t\t\t4\t\tThe Prestige\n");
+                printf("\n\t\t\t5\t\tShutter Island\n");
+                printf("\n\t\t\t6\t\tA Beautiful Mind\n");
+                printf("\n\t\t\t7\t\tAqua Man\n");
+                printf("\n\t\t\t8\t\tAvengers\n");
+                printf("\n\t\t\t9\t\tJames Bond\n");
+                printf("\n\t\t\t10\t\tJurassic Park\n");
+
+                break;
+
+            case 3:
+                printf("\n\t\t*****************************\n");
+                printf("\n\t\t|----- Top 10 On-line Game -----|\n");
+                printf("\n\t\t*****************************\n");
+
+                char *onlineGame[] = {" Player Unknown Battle Grounds            ",
+                                      " Fortanite Battle Royal                   ",
+                                      " Apex Legends                             ",
+                                      " League Of Legends                        ",
+                                      " Count Strike                             ",
+                                      " Hearth Stone                             ",
+                                      " Maine craft                              ",
+                                      " Dota 2                                   ",
+                                      " The Division                             ",
+                                      " The Splatoon 2                           "
+                                     };
+                int year[10]= {2018,2017,2019,2009,2014,2012,2011,2015,2019,2015};
+
+                printf("\n\t\tNo \t\t  Game Name\t\t\t\t\tLunched Year\n");
+
+                for(m = 0 ; m <10 ; m++)
+                {
+                    printf("\n\t\t%d\t %s\t\t%d\n",m+1,onlineGame[m],year[m]);
+                }
+                break;
+
             default:
                 printf("\n\t\terror !! you limit our cross , go home");
             }
