@@ -151,7 +151,7 @@ int dada()
     case 3:
         system("cls");
         printf("\n\tWelcome Book Lover to the zone...!!\n\n");
-
+        printf("\n\tHow many times you wanna see go over again!!( press 3-no limit)\n");
 
         int q,w;
 
@@ -160,19 +160,19 @@ int dada()
 
 
         char *bookNam[] = {"Don Quixote                               ",
-                       "Xinhuan Zidian                            ",
-                       "A Tale Of Two Cities                      ",
-                       "The Lord Of The Rings                     ",
-                       "The Little Prince                         ",
-                       "Harry Poter                               ",
-                       "And Then There Were None                  ",
-                       "Dream Of The Red Chember                  ",
-                       "The Hobbit                                ",
-                       "The Lion The Witch & The Wardorbe         "
-                      };
+                           "Xinhuan Zidian                            ",
+                           "A Tale Of Two Cities                      ",
+                           "The Lord Of The Rings                     ",
+                           "The Little Prince                         ",
+                           "Harry Poter                               ",
+                           "And Then There Were None                  ",
+                           "Dream Of The Red Chember                  ",
+                           "The Hobbit                                ",
+                           "The Lion The Witch & The Wardorbe         "
+                          };
         int copySold[10]= {500,400,200,150,142,120,100,100,100,85};
 
-        printf("\n\t\tNo \t\tBook Name\t\t\tCopy sold(Million)\n");
+        printf("\n\t\tNo \t\tBook Name\t\t\t\tCopy sold(Million)\n");
 
         for(m = 0 ; m <10 ; m++)
         {
