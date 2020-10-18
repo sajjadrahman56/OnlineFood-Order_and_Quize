@@ -2,44 +2,45 @@
 #include <string.h>
 #include <conio.h>
 
-struct signin{
+struct signin
+{
 
-char fname[25];
-char lname[25];
-char username[25];
-char address[100];
-int number[11];
-char password[25];
+    char fname[25];
+    char lname[25];
+    char username[25];
+    char address[100];
+    int number[11];
+    char password[25];
 };
 Registration()
 {
 
-FILE*HungryPanda;
-HungryPanda=fopen("HungryPanda1.txt","w");
-struct signin f;
+    FILE*HungryPanda;
+    HungryPanda=fopen("HungryPanda1.txt","w");
+    struct signin f;
 
-printf("Enter Frist name: ");
-scanf("%s",f.fname);
-printf("Enter Last name: ");
-scanf("%s",f.lname);
-printf("Enter username: ");
-scanf("%s",f.username);
-printf("Enter your address: ");
-scanf("%s",f.address);
-printf("Enter your Number: ");
-scanf("%s",f.number);
-printf("Enter your password: ");
-scanf("%s",f.password);
-fwrite(&f,sizeof(f),1,HungryPanda);
+    printf("Enter Frist name: ");
+    scanf("%s",f.fname);
+    printf("Enter Last name: ");
+    scanf("%s",f.lname);
+    printf("Enter username: ");
+    scanf("%s",f.username);
+    printf("Enter your address: ");
+    scanf("%s",f.address);
+    printf("Enter your Number: ");
+    scanf("%s",f.number);
+    printf("Enter your password: ");
+    scanf("%s",f.password);
+    fwrite(&f,sizeof(f),1,HungryPanda);
 
-fclose(HungryPanda);
+    fclose(HungryPanda);
 
-printf("\n\n\nyour User name is userID\n");
-printf("\nNow signin in HungryPand with userID and password\n");
-printf("\nPress any key to continue........");
-getch();
-system("CLS");
-signin();
+    printf("\n\n\nyour User name is userID\n");
+    printf("\nNow signin in HungryPand with userID and password\n");
+    printf("\nPress any key to continue........");
+    getch();
+    system("CLS");
+    signin();
 
 }
 
@@ -102,7 +103,7 @@ void main()
     }
     else if(enter==2)
     {
-       system("CLS");
+        system("CLS");
         signin();
     }
 
@@ -133,12 +134,12 @@ void main()
             break;
         }
         case 4 :
-            {
-                system("CLS");
-                Exit();
+        {
+            system("CLS");
+            Exit();
 
 
-            }
+        }
 
         }
     }
@@ -1029,7 +1030,7 @@ level:
                 p[order_count].cost += (35 * qu);
             break;
         }
-         case 47 :
+        case 47 :
         {
             printf ("Lassi\n");
 
@@ -1065,7 +1066,7 @@ level:
             p[order_count].cost += (70*qu);
             break;
         }
-         case 50 :
+        case 50 :
         {
             printf ("Special lassi\n");
 
@@ -1118,18 +1119,21 @@ int receive ()
 {
     if (order_count==0)
     {
-        printf ("Please order first\n");
+        printf("\n\n\t---Your Current Status ---\n");
+        printf("\n\n\t\tYour Order = 0\n");
+        printf ("\n\n\t\tPlease order first\n");
 
     }
 
     else if (served_count == order_count)
     {
-        printf ("All order served\n");
+        printf ("\n\n\t\tAll order served\n");
+        printf ("\n\n\t\tOrder no. %d by %s is ready\n", p[served_count].order_number, p[served_count].name);
+        printf ("\n\n\t\tEnjoy your meal\n\n");
 
     }
 
-    printf ("Order no. %d by %s is ready\n", p[served_count].order_number, p[served_count].name);
-    printf ("Enjoy your meal\n\n");
+
     served_count++;
 }
 
@@ -1144,60 +1148,60 @@ int Exit ()
 
 {
     int enter2,enter3,enter4,et;
-     system ("COLOR 2");
-                printf("Thanks for chosen Hungry Panda\n");
+    system ("COLOR 2");
+    printf("Thanks for chosen Hungry Panda\n");
     printf("If you are not satisfied with our service then report our restaurant or else Rating our restaurant.\n");
-                printf("Enter'1' Rating\nEnter'2' Report\n");
-                scanf("%d",&et);
-                switch(et)
-                {
-            case 1 :
+    printf("Enter'1' Rating\nEnter'2' Report\n");
+    scanf("%d",&et);
+    switch(et)
+    {
+    case 1 :
 
-                 system("CLS");
-                    printf("Enter'1'for 5 STAR\nEnter'2'for 3 STAR\nEnter'3'for 1 STAR\n");
-                    scanf("%d",&enter3);
-                    if(enter3==1)
-                    {
-                        system("CLS");
-                        system ("COLOR 5");
-                        printf("Wow! THANK YOU FOR YOUR RATING");
-                    }
-                    else if(enter3==2)
-                    {
-                        system("CLS");
-                        system ("COLOR 3");
-                        printf("THNAK YOU FOR YOUR RATING");
-                    }
-                    else if(enter3==3)
-                    {
-                         system("CLS");
-                         system ("COLOR 4");
-                         printf("THANK YOU");
-                    }
-                    break;
-            case 2 :
-                system("CLS");
+        system("CLS");
+        printf("Enter'1'for 5 STAR\nEnter'2'for 3 STAR\nEnter'3'for 1 STAR\n");
+        scanf("%d",&enter3);
+        if(enter3==1)
+        {
+            system("CLS");
+            system ("COLOR 5");
+            printf("Wow! THANK YOU FOR YOUR RATING");
+        }
+        else if(enter3==2)
+        {
+            system("CLS");
+            system ("COLOR 3");
+            printf("THNAK YOU FOR YOUR RATING");
+        }
+        else if(enter3==3)
+        {
+            system("CLS");
+            system ("COLOR 4");
+            printf("THANK YOU");
+        }
+        break;
+    case 2 :
+        system("CLS");
         printf("1.I have no mood for rating thats why choice report option\n2.Food quality not good\n3.late delivery.\n");
-                scanf("%d",enter4);
-                if(enter4==1)
-                {
-                    system("CLS");
-                    system ("COLOR 4");
-                    printf("OK!when you are in mood rate our restaurant.THANK YOU\n ");
-                }
-                else if(enter4==2)
-                {
-                    system("CLS");
-                    system ("COLOR 5");
-                    printf("OK!We will improve our food Quality.THANK YOU\n");
-                }
-                else if(enter4==3)
-                {
-                    system("CLS");
-                    system ("COLOR 3");
-                    printf("OK!We will deliver our food faster.THANK YOU\n");
-                }
-                }
+        scanf("%d",enter4);
+        if(enter4==1)
+        {
+            system("CLS");
+            system ("COLOR 4");
+            printf("OK!when you are in mood rate our restaurant.THANK YOU\n ");
+        }
+        else if(enter4==2)
+        {
+            system("CLS");
+            system ("COLOR 5");
+            printf("OK!We will improve our food Quality.THANK YOU\n");
+        }
+        else if(enter4==3)
+        {
+            system("CLS");
+            system ("COLOR 3");
+            printf("OK!We will deliver our food faster.THANK YOU\n");
+        }
+    }
 }
 int payment()
 
@@ -1209,18 +1213,18 @@ int payment()
     scanf("%d",&pt);
     switch (pt)
     {
-   case 1 :
-      puts("Enter your card number:");
-      scanf("%d",&card);
+    case 1 :
+        puts("Enter your card number:");
+        scanf("%d",&card);
         puts("Enter your code:");
-       scanf("%d",&code);
+        scanf("%d",&code);
 
         puts("Your Food on the way.");
         Exit ();
-       break;
-   case 2 :
-       puts("please keep the amount on delivery time");
-       Exit();
+        break;
+    case 2 :
+        puts("please keep the amount on delivery time");
+        Exit();
         break;
 
     }
@@ -1237,7 +1241,7 @@ int entertainment()
 
     switch(n)
     {
-        /*About Green Sylhet*/
+    /*About Green Sylhet*/
 
     case 1:
         system("cls");
