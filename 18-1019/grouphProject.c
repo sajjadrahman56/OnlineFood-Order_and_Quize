@@ -1139,10 +1139,10 @@ int receive ()
 
 int display ()
 {
-    printf ("Total order taken: %d\n", (order_count));
-    printf ("Total number of order served %d\n", served_count);
-    printf ("Number of Currently waiting to be served: %d\n", (order_count-served_count));
-    printf ("Currently preparing food for order no. %d\n\n", p[served_count].order_number);
+    printf ("\n\n\t\tTotal order taken: %d\n", (order_count));
+    printf ("\n\n\t\tTotal number of order served %d\n", served_count);
+    printf ("\n\n\t\tNumber of Currently waiting to be served: %d\n", (order_count-served_count));
+    printf ("\n\n\t\tCurrently preparing food for order no. %d\n\n", p[served_count].order_number);
 }
 int Exit ()
 
