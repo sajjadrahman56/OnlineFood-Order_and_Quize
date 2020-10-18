@@ -2,6 +2,21 @@
 #include <string.h>
 #include <conio.h>
 
+
+int order();
+int items ();
+int  entertainment();
+
+struct order
+{
+    char name[50];
+    int order_number;
+    int number_of_food;
+    int cost;
+} p[10000];
+
+int order_count = 0, served_count = 0, waiting_now = 0;
+
 struct signin
 {
 
@@ -12,6 +27,7 @@ struct signin
     int number[11];
     char password[25];
 };
+
 Registration()
 {
 
@@ -77,18 +93,8 @@ signin()
     fclose(HungryPanda);
 }
 
-int order();
-int items ();
-int  entertainment();
-struct order
-{
-    char name[50];
-    int order_number;
-    int number_of_food;
-    int cost;
-} p[10000];
 
-int order_count = 0, served_count = 0, waiting_now = 0;
+
 
 void main()
 {
@@ -1089,19 +1095,19 @@ level:
     }
 
     char temp;
-    printf ("Do you want to order anything else?(y/n)\n ");
+    printf ("\n\n\t\tDo you want to order anything else?(y/n)\n ");
     scanf("%c", &temp);
     if (temp == 'y' || temp == 'Y')
         goto level;
 
 
 
-    printf ("\nNumber of food ordered %d\n", p[order_count].number_of_food);
+    printf ("\n\n\t\tNumber of food ordered %d\n", p[order_count].number_of_food);
     //printf ("\nThank you %s for your order. Your bill is %dtaka.\nPlease wait 10 minutes Sir for your food .\n\n", p[order_count].name, p[order_count].cost);
 
-    printf ("\n\tThank you %s for your order.\n\tPlease wait 10 minutes Sir for your food .\n\n", p[order_count].name, p[order_count].cost);
+    printf ("\n\n\t\tThank you %s for your order.\n\tPlease wait 10 minutes Sir for your food .\n\n", p[order_count].name);
 
-    printf("\n\n\t******If you want to pass your waiting time just press = 5\n\n");
+    printf("\n\n\t**If you want to pass your waiting time just press = 5\n\n");
 
     int press ;
     scanf("%d",&press);
@@ -1127,6 +1133,17 @@ int receive ()
         printf("\n\n\t---Your Current Status ---\n");
         printf("\n\n\t\tYour Order = 0\n");
         printf ("\n\n\t\tPlease order first\n");
+
+        printf("\n\n\t**If  can pass your time before order just press = 5\n\n");
+
+        int press ;
+        scanf("%d",&press);
+
+        if(press == 5)
+            entertainment();
+
+        else
+            printf("\n\n\t\tinput error :");
 
     }
 
@@ -1237,6 +1254,7 @@ int payment()
 
 int entertainment()
 {
+    system("CLS");
     int n;
 
     printf("\n\t1. Trip Advisor\t\t2. Entertainment\t\t3. Best Books\n\n");
@@ -1422,7 +1440,7 @@ int entertainment()
         printf("\n\t\t\t\t|----- Welcome Book Lover to the zone...!!-----|\n");
         printf("\n\t\t\t\t************************************************\n");
 
-        printf("\n\n\n\tEnter any number between 3 to infinite\n");
+        printf("\n\n\tEnter any number between 3 to infinite\n");
 
         int q,w;
 
