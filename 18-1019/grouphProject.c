@@ -19,25 +19,25 @@ Registration()
     HungryPanda=fopen("HungryPanda1.txt","w");
     struct signin f;
 
-    printf("Enter Frist name: ");
+    printf("\n\n\t\t\tEnter Frist name: ");
     scanf("%s",f.fname);
-    printf("Enter Last name: ");
+    printf("\n\n\t\t\tEnter Last name: ");
     scanf("%s",f.lname);
-    printf("Enter username: ");
+    printf("\n\n\t\t\tEnter username: ");
     scanf("%s",f.username);
-    printf("Enter your address: ");
+    printf("\n\n\t\t\tEnter your address: ");
     scanf("%s",f.address);
-    printf("Enter your Number: ");
+    printf("\n\n\t\t\tEnter your Number: ");
     scanf("%s",f.number);
-    printf("Enter your password: ");
+    printf("\n\n\t\t\tEnter your password: ");
     scanf("%s",f.password);
     fwrite(&f,sizeof(f),1,HungryPanda);
 
     fclose(HungryPanda);
 
-    printf("\n\n\nyour User name is userID\n");
-    printf("\nNow signin in HungryPand with userID and password\n");
-    printf("\nPress any key to continue........");
+    printf("\n\n\n\t\t\tyour User name is userID\n");
+    printf("\n\n\t\t\tNow signin in HungryPand with userID and password\n");
+    printf("\n\n\t\t\tPress any key to continue........");
     getch();
     system("CLS");
     signin();
@@ -61,14 +61,14 @@ signin()
         if(strcmp(username,f.username)==0 && strcmp(password,f.password)==0)
         {
             system("CLS");
-            printf("You successfully log in...\n ");
-            printf("Welcome to Hungry Panda restaurant\n");
-            printf ("1. Order\n2. Serve\n3. Display \n4. Exit the program\n");
+            printf("\n\n\t\t\tYou successfully log in...\n ");
+            printf("\n\n\t\t\tWelcome to Hungry Panda restaurant\n");
+            printf ("\n\n\t\t\t1. Order\n\n\t\t\t2. Current Status \n\n\t\t\t3. Display \n\n\t\t\t4. Exit the program\n");
         }
         else
         {
             system("CLS");
-            printf("Ooops!Enter correct UserID and Password\n");
+            printf("\n\n\t\t\tOoops!Enter your correct UserID and Password\n");
             signin();
 
         }
@@ -93,10 +93,10 @@ int order_count = 0, served_count = 0, waiting_now = 0;
 void main()
 {
     int enter;
-    printf("Hello there!Are you Hungry?\nThen Order food in HunGryPanda.\n");
-    printf("Enter '1' for registration\nEnter '2' for signin\n");
+    printf("\n\n\t\t\tHello there!Are you Hungry?\n\n\t\t\tThen Order food in HunGryPanda.\n");
+    printf("\n\n\t\tEnter '1' for registration\n\n\t\tEnter '2' for signin\n");
     scanf("%d",&enter);
-    if(enter==1)
+    if(enter == 1)
     {
         system("CLS");
         Registration();
@@ -1109,9 +1109,14 @@ level:
     if(press == 5)
         entertainment();
 
-    order_count ++;
-    printf("PLease select payment method.\n");
+    system("CLS");
+    printf("\n\n\t\t\tPLease select payment method.\n");
     payment ();
+
+
+
+    order_count ++;
+
 
 }
 
@@ -1209,21 +1214,21 @@ int payment()
 
     int card,cash,printf,code,pt;
     system ("COLOR 2");
-    puts("Enter'1'Pay with card\nEnter'2'Cash of delivery\n");
+    puts("Enter'1'Pay with card\nEnter'2'Cash on delivery\n");
     scanf("%d",&pt);
     switch (pt)
     {
     case 1 :
-        puts("Enter your card number:");
+        puts("\n\n\t\t\tEnter your card number:");
         scanf("%d",&card);
-        puts("Enter your code:");
+        puts("\n\n\t\t\tEnter your code:");
         scanf("%d",&code);
 
         puts("Your Food on the way.");
         Exit ();
         break;
     case 2 :
-        puts("please keep the amount on delivery time");
+        puts("\n\n\t\t\tplease keep the amount on delivery time");
         Exit();
         break;
 
