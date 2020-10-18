@@ -32,7 +32,7 @@ int entertainment()
         printf("\n\t\t\t\t|----Welcome to EVER GREEN SYLHET ...!!----|\n");
         printf("\n\t\t\t\t************************************************\n");
 
-        printf("\n\n\n\tHow many times you wanna see it  go over again!!( press 3-no limit)\n");
+        printf("\n\n\n\tEnter any number between 3 to infinite\n");
 
         int m,n;
 
@@ -84,7 +84,7 @@ int entertainment()
         printf("\n\t\t\t\t|----Welcome to The Entertainment world...!!----|\n");
         printf("\n\t\t\t\t************************************************\n");
 
-        printf("\n\n\n\tHow many times you wanna see it  go over again!!( press 3-no limit)\n");
+        printf("\n\n\n\tEnter any number between 3 to infinite\n");
 
         int v,b;
 
@@ -197,7 +197,7 @@ int entertainment()
         printf("\n\t\t\t\t|----- Welcome Book Lover to the zone...!!-----|\n");
         printf("\n\t\t\t\t************************************************\n");
 
-        printf("\n\n\n\tHow many imes you wanna see it  go over again!!( press 3-no limit)\n");
+        printf("\n\n\n\tEnter any number between 3 to infinite\n");
 
         int q,w;
 
@@ -279,4 +279,5 @@ int entertainment()
 
     }
 }
+
 
