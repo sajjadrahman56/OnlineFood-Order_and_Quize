@@ -929,6 +929,8 @@ level:
                 p[order_count].number_of_food +=qu;
                 p[order_count].cost += (5*qu);
                 break;
+
+
             }
         case 3 :
             {
@@ -939,6 +941,8 @@ level:
                 p[order_count].number_of_food +=qu;
                 p[order_count].cost += (20*qu);
                 break;
+
+
             }
         case 4 :
             {
@@ -955,6 +959,7 @@ level:
                 else if (i==2)
                     p[order_count].cost += (25*qu);
                 break;
+
             }
         case 5 :
             {
