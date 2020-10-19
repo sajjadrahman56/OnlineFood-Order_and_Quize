@@ -90,17 +90,17 @@ void st(int in)
     }
     case 6 :
     {
-        gotoxy(56, 15);
+        //gotoxy(56, 15);
         printf ("Enter the size of Vegetables: 1. half  2. full\n");
         int i;
-        gotoxy(56,16);
+        //gotoxy(56,16);
         scanf ("%d", &i);
         getchar();
 
-        gotoxy(56,17);
+        //gotoxy(56,17);
         printf ("Please enter the quantity: ");
 
-        gotoxy(56,18);
+        //gotoxy(56,18);
         scanf ("%d", &qu);
         getchar();
         p[order_count].number_of_food +=qu;
@@ -339,6 +339,10 @@ void st(int in)
         p[order_count].number_of_food +=qu;
         p[order_count].cost += (15*qu);
         break;
+
+
+
+
     }
     case 25 :
     {
@@ -747,11 +751,24 @@ void breakfast()
     printf("%d\n",p[order_count].cost);
 
     totalcost+=p[order_count].cost;
-    main();
+
+    //main();
+
+    printf("\n\tDo you want to order again ? y\n");
+
+    char temp;
+    scanf("%c", &temp);
+    if (temp == 'y' || temp == 'Y')
+        main();
+
+
 
 
 
 }
+
+
+
 void lunch()
 {
     printf("Lunch\n"
@@ -782,7 +799,7 @@ void lunch()
         printf ("\nEnter chosen item code :- ");
         scanf("%d",&in);
         getchar();
-        st(in+8);
+        st(in+23);
     }
     printf("%d\n",p[order_count].cost);
 
@@ -791,7 +808,7 @@ void lunch()
 
 }
 
-void lunch()
+void Dinner()
 {
     printf("Dinner\n"
            "1.Rice-----------------------------------------15/-\n"
@@ -828,13 +845,83 @@ void lunch()
 
 }
 
+void Others()
+{
+    printf("Others\n"
+           "1.Naan---------------------half/full-----------15/25-\n"
+           "2.Special Naan-------------half/full-----------20/40-\n"
+           "3.Chicken Grill------------half/full-----------180/350- \n"
+           "4.Chicken Chap-------------half/full-----------155/210- \n"
+           "5.Chicken BBQ--------------half/full-----------120/240- \n"
+           "6.Chicken Tikka------------half/full-----------100/180- \n"
+           "7.Chicken Korai------------half/full-----------55/110-\n"
+           "8.Vegetable Fried Rice-----quarter/full--------60/240-\n"
+           "9.Chicken Fried Rice-------quarter/full--------120/480- \n");
+
+    int n, in, qu;
+    p[order_count].order_number = 10000+order_count;
+    p[order_count].number_of_food = n;
+    p[order_count].cost = 0;
+    p[order_count].number_of_food = 0;
+    printf ("How many items you want to order?\n ");
+    scanf ("%d", &n);
+    getchar ();
+    while(n--)
+    {
+        printf ("\nEnter chosen item code :- ");
+        scanf("%d",&in);
+        getchar();
+        st(in + 34);
+    }
+    printf("%d\n",p[order_count].cost);
+
+    totalcost+=p[order_count].cost;
+    main();
+
+}
+
+void  teaDrinks()
+{
+    printf("Tea & Drinks\n"
+           "1.Tea-------------------------------------------------15/-\n"
+           "2.Coffee--------------------hot/cold------------------30/45-\n"
+           "3.Cold Drinks---------------250mg/500mg---------------20/35-\n"
+           "4.Lassi-----------------------------------------------40/-\n"
+           "5Special coffee--------------------------------------50/-\n"
+           "6.Special lassi---------------------------------------70/-\n"
+           "7.Cappuccino------------------------------------------90/-\n");
+
+    int n, in, qu;
+    p[order_count].order_number = 10000+order_count;
+    p[order_count].number_of_food = n;
+    p[order_count].cost = 0;
+    p[order_count].number_of_food = 0;
+    printf ("How many items you want to order?\n ");
+    scanf ("%d", &n);
+    getchar ();
+    while(n--)
+    {
+        printf ("\nEnter chosen item code :- ");
+        scanf("%d",&in);
+        getchar();
+        st(in + 43);
+    }
+    printf("%d\n",p[order_count].cost);
+
+    totalcost+=p[order_count].cost;
+    main();
+
+}
+
+
+
 
 
 int main()
 {
     int a;
     printf("Total cost = %d\n", totalcost);
-    printf("1: BreakFast  2: Lunch\n");
+    printf("1: BreakFast  2: Lunch  3: Dinner  4: Others    5: Tea And Drinks \n");
     scanf("%d",&a);
     if(a==1)
     {
@@ -844,8 +931,19 @@ int main()
     {
         lunch();
     }
+    else if(a==3)
+    {
+         Dinner();
+    }
+    else if(a==4)
+    {
+         Others();
+    }
 
-
+    else if(a==5)
+    {
+         teaDrinks();
+    }
 
 
 
