@@ -27,6 +27,8 @@ int payment();
 int close();
 
 
+int  returnMenu();
+
 int signin();
 int Registration();
 
@@ -131,6 +133,70 @@ int main()
 
 
 
+int  returnMenu()
+{
+    int n, in, qu;
+    p[order_count].order_number = 10000+order_count;
+
+    p[order_count].number_of_food = n;
+    p[order_count].cost = 0;
+    p[order_count].number_of_food = 0;
+level:
+    //printf ("How many items you want to order?\n ");
+    //scanf ("%d", &n);
+    //getchar ();
+   // while (n--)
+
+        //printf ("\nEnter chosen item code\n");
+        printf("\n1: BreakFast  2: Lunch  3: Dinner  4: Others  5: Tea And Drinks \n");
+        scanf ("%d", &in);
+        getchar();
+        switch(in)
+        {
+           // system("CLS");
+            ///int a;
+            //printf("\n\tTotal cost = %d\n", totalcost);
+
+            //scanf("%d",&a);
+        case 1:
+            //system("CLS");
+            Breakfast();
+            break;
+        case 2 :
+            lunch();
+            break;
+        case 3 :
+            Dinner();
+            break;
+        case 4 :
+            Others();
+        case 5 :
+            teaDrinks();
+            break;
+
+        default :
+        {
+            printf ("Invalid selection try again\n");
+            n++;
+        }
+        }
+
+
+    char temp;
+    printf ("Do you want to order anything else?(y/n)\n ");
+    scanf("%c", &temp);
+    if (temp == 'y' || temp == 'Y')
+        goto level ;
+     printf("\n\tTotal cost = %d\n", totalcost);
+    printf ("\nNumber of food ordered %d\n", p[order_count].number_of_food);
+    system("CLS");
+    loading();
+    system("CLS");
+    printf ("\nThank you %s for your order. Your bill is %d taka.\n\n", p[order_count].name, p[order_count].cost);
+    order_count ++;
+    printf("PLease select payment method.\n");
+    payment ();
+ }
 
 
 
@@ -241,14 +307,16 @@ void Breakfast()
     totalcost += p[order_count].cost;
 
     //main();
-
+     printf("\n\tTotal cost = %d\n", totalcost);
     printf("\n\tDo you want to order again ? 'y'\'n'");
 
     char temp;
     scanf("%c", &temp);
     if (temp == 'y' || temp == 'Y')
-        main();
+         returnMenu();
 
+    //main();
+     //printf("\n\tTotal cost = %d\n", totalcost);
     printf ("\nNumber of food ordered %d\n", p[order_count].number_of_food);
     system("CLS");
     loading();
@@ -269,7 +337,7 @@ void Breakfast()
 void lunch()
 {
     printf("Lunch\n"
-           "1.Rice------------------------------------------------20/-      \n"
+           "1.Rice------------------------------------------------15/-      \n"
            "2.Dal-----------------------half/full-----------------10/20    \n"
            "3.Mixed Vegetables------------------------------------20/-      \n"
            "4.Boal Fish Curry_------------------------------------110/-    \n"
@@ -303,7 +371,26 @@ void lunch()
     printf("%d\n",p[order_count].cost);
 
     totalcost+=p[order_count].cost;
-    main();
+    //main();
+
+    printf("\n\tTotal cost = %d\n", totalcost);
+    printf("\n\tDo you want to order again ? 'y'\'n'");
+
+    char temp;
+    scanf("%c", &temp);
+    if (temp == 'y' || temp == 'Y')
+          returnMenu();
+
+    //main();
+     //printf("\n\tTotal cost = %d\n", totalcost);
+    printf ("\nNumber of food ordered %d\n", p[order_count].number_of_food);
+    system("CLS");
+    loading();
+    system("CLS");
+    printf ("\nThank you %s for your order. Your bill is %d taka.\n\n", p[order_count].name,totalcost);
+    order_count ++;
+    printf("PLease select payment method.\n");
+    payment ();
 
 }
 
@@ -340,7 +427,30 @@ void Dinner()
     printf("%d\n",p[order_count].cost);
 
     totalcost+=p[order_count].cost;
-    main();
+    //main();
+
+
+    printf("\n\tTotal cost = %d\n", totalcost);
+    printf("\n\tDo you want to order again ? 'y'\'n'");
+
+    char temp;
+    scanf("%c", &temp);
+    if (temp == 'y' || temp == 'Y')
+         returnMenu();
+
+    //main();
+     //printf("\n\tTotal cost = %d\n", totalcost);
+    printf ("\nNumber of food ordered %d\n", p[order_count].number_of_food);
+    system("CLS");
+    loading();
+    system("CLS");
+    printf ("\nThank you %s for your order. Your bill is %d taka.\n\n", p[order_count].name,totalcost);
+    order_count ++;
+    printf("PLease select payment method.\n");
+    payment ();
+
+
+
 
 }
 
@@ -375,7 +485,30 @@ void Others()
     printf("%d\n",p[order_count].cost);
 
     totalcost+=p[order_count].cost;
-    main();
+    //main();
+
+
+    printf("\n\tTotal cost = %d\n", totalcost);
+    printf("\n\tDo you want to order again ? 'y'\'n'");
+
+    char temp;
+    scanf("%c", &temp);
+    if (temp == 'y' || temp == 'Y')
+          returnMenu();
+
+    //main();
+     //printf("\n\tTotal cost = %d\n", totalcost);
+    printf ("\nNumber of food ordered %d\n", p[order_count].number_of_food);
+    system("CLS");
+    loading();
+    system("CLS");
+    printf ("\nThank you %s for your order. Your bill is %d taka.\n\n", p[order_count].name,totalcost);
+    order_count ++;
+    printf("PLease select payment method.\n");
+    payment ();
+
+
+
 
 }
 
@@ -408,9 +541,34 @@ void  teaDrinks()
     printf("%d\n",p[order_count].cost);
 
     totalcost+=p[order_count].cost;
-    main();
+    //main();
+
+    printf("\n\tTotal cost = %d\n", totalcost);
+    printf("\n\tDo you want to order again ? 'y'\'n'");
+
+    char temp;
+    scanf("%c", &temp);
+    if (temp == 'y' || temp == 'Y')
+          returnMenu();
+
+    //main();
+     //printf("\n\tTotal cost = %d\n", totalcost);
+    printf ("\nNumber of food ordered %d\n", p[order_count].number_of_food);
+    system("CLS");
+    loading();
+    system("CLS");
+    printf ("\nThank you %s for your order. Your bill is %d taka.\n\n", p[order_count].name,totalcost);
+    order_count ++;
+    printf("PLease select payment method.\n");
+    payment ();
+
+
+
 
 }
+
+
+
 
 
 
@@ -539,7 +697,7 @@ void st(int in)
         scanf ("%d", &qu);
         getchar();
         p[order_count].number_of_food +=qu;
-        p[order_count].cost += (15*qu);
+        p[order_count].cost += (20*qu);
         break;
     }
     case 10 :
@@ -1445,7 +1603,8 @@ int receive ()
         scanf("%d",&enter8);
         if(enter8==1)
         {
-            main();
+
+            //main();
         }
 
     }
@@ -1836,9 +1995,5 @@ int quize()
 {
 
 }
-
-
-
-
 
 
