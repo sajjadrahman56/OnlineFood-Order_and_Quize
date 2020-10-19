@@ -213,13 +213,13 @@ void st(int in)
         getchar();
         p[order_count].number_of_food +=qu;
         if (i==1)
-            {
-                p[order_count].cost += (50*qu);
-            }
+        {
+            p[order_count].cost += (50*qu);
+        }
         else
-            {
-                p[order_count].cost += (110*qu);
-            }
+        {
+            p[order_count].cost += (110*qu);
+        }
         break;
     }
     case 16 :
@@ -285,13 +285,13 @@ void st(int in)
         getchar();
         p[order_count].number_of_food +=qu;
         if (i==1)
-            {
-                p[order_count].cost += (90*qu);
-            }
+        {
+            p[order_count].cost += (90*qu);
+        }
         else
-            {
-                p[order_count].cost += (90*qu);
-            }
+        {
+            p[order_count].cost += (90*qu);
+        }
         break;
     }
     case 21 :
@@ -791,7 +791,42 @@ void lunch()
 
 }
 
-void
+void lunch()
+{
+    printf("Dinner\n"
+           "1.Rice-----------------------------------------15/-\n"
+           "2.Dal----------------------half/full-----------7/14/-\n"
+           "3.Egg Curry------------------------------------25/-\n"
+           "4.Chicken Curry------------half/full-----------80/130- \n"
+           "5.Chicken Roast------------1piece/2piece-------90/150- \n"
+           "6.Chicken Bhuna---------------------------------90/- \n"
+           "7.Mutton Curry---------------------------------110/- \n"
+           "8.Mutton Bhuna-------------half/full-----------140/220- \n"
+           "9.Chicken Biriyani---------quarter/full--------60/120-\n"
+           "10.Mutton Biriyani----------quarter/full--------85/150-\n"
+           "11.Kachhi Biriyani----------quarter/full--------90/160-\n");
+
+    int n, in, qu;
+    p[order_count].order_number = 10000+order_count;
+    p[order_count].number_of_food = n;
+    p[order_count].cost = 0;
+    p[order_count].number_of_food = 0;
+    printf ("How many items you want to order?\n ");
+    scanf ("%d", &n);
+    getchar ();
+    while(n--)
+    {
+        printf ("\nEnter chosen item code :- ");
+        scanf("%d",&in);
+        getchar();
+        st(in+23);
+    }
+    printf("%d\n",p[order_count].cost);
+
+    totalcost+=p[order_count].cost;
+    main();
+
+}
 
 
 
