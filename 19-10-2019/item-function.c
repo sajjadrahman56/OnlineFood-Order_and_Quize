@@ -99,7 +99,6 @@ void st(int in)
 
         //gotoxy(56,17);
         printf ("Please enter the quantity: ");
-
         //gotoxy(56,18);
         scanf ("%d", &qu);
         getchar();
