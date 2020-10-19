@@ -17,6 +17,25 @@ int enter;
         int in;
         scanf ("%d", &in);
         getchar ();
+
+        printf("\n1: BreakFast  2: Lunch  3: Dinner  4: Others  5: Tea And Drinks \n");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         switch (in)
         {
         case 1 :
