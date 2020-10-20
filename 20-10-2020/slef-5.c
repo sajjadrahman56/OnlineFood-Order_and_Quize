@@ -92,6 +92,7 @@ int main()
         while(v--)
         {
 
+            printf("\n\n\n\t\t1.Top 10 Football  \t2.Top 10 Movie  \t3.Top 10 On-line Game \n");
             printf("\n\n\t\tchose one !!\n");
             scanf("%d",&b);
             switch(b)
