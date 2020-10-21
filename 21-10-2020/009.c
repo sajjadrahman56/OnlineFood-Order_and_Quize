@@ -461,7 +461,7 @@ void lunch()
     printf("\n\n\n");
     printf("\n\t\t\t\t\t****************************************\n");
     printf("\n\t\t\t\t\t.                                       \n");
-    printf("\n\t\t\t\t\t. Thank you Mr.  for your Order          \n");
+    printf("\n\t\t\t\t\t. Thank you Mr.   for your Order          \n");
     printf("\n\t\t\t\t\t.                                       \n");
     printf("\n\t\t\t\t\t.  your total bill = %d Taka            n\n",totalcost);
     printf("\n\t\t\t\t\t.                                       \n");
@@ -1849,7 +1849,7 @@ int information()
         while(m--)
         {
             printf("\n\n\n\t\t1.  N A T U R E and  P A R K  \t2. O T H E R S ");
-            printf("\n\n\tchose one !! --- :  ");
+            printf("\n\n\t\tchose one !! --- :  ");
             scanf("%d",&n);
             switch(n)
             {
@@ -1857,7 +1857,7 @@ int information()
                 system("cls");
 
                 printf("\n\t\t\t\t\t************************************\n");
-                printf("\n\t\t\t\\tt|----- Most Visitor spot in Sylhet  -----|\n");
+                printf("\n\t\t\t\t\t|---- Most Visitor spot in Sylhet ---|\n");
                 printf("\n\t\t\t\t\t*************************************\n\n\n");
 
                 for(int m = 0 ; m < 10; m++)
@@ -1869,7 +1869,7 @@ int information()
             case 2:
                 system("cls");
                 printf("\n\t\t\t\t\t************************************\n");
-                printf("\n\t\t\t\t\t|----- Tourist Spot in Sylhet  -----|\n");
+                printf("\n\t\t\t\t\t\t|----- Tourist Spot in Sylhet  -----|\n");
                 printf("\n\t\t\t\t\t*************************************\n\n");
 
                 for(int o = 0 ; o < 12; o++)
