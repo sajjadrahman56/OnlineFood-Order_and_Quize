@@ -6,6 +6,7 @@
 
 void welcome();
 void  logIn();
+void backMenu();
 
 void gotoxy(int x,int y);
 void st(int in);
@@ -2519,6 +2520,10 @@ int quize()
     }
     printf("\n\t\t\tYour score is %d of 20",score);
 
+    printf("\n\n\t\t\t Press any key back to main function");
+    getch();
+    system("CLS");
+    backMenu();
 }
 
 /*1st welcome part */
@@ -2599,11 +2604,12 @@ void contributor()
     printf("\t\t\t*.                                                                                .*\n");
     printf("\t\t\t************************************************************************************\n");
 }
-/*
+
+
 void backMenu()
 {
+    int in,n;
     level:
-
     printf("\n\n\t\t1:Order\n\t\t2:Awaiting Food \n\t\t3:Quiz\n\t\t4:Exit \n");
     scanf ("%d", &in);
     getchar();
@@ -2629,10 +2635,9 @@ void backMenu()
     {
 
         printf ("\n\n\t\t\tInvalid selection try again\n");
-        n++;
+
     }
-
-
 }
 }
-*/
+
+
