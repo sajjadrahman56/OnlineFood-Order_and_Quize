@@ -24,6 +24,7 @@ int quize();
 int Exit ();
 int payment();
 int close();
+void contributor();
 /*re call all order function */
 int  returnMenu();
 int signin();
@@ -103,7 +104,7 @@ int main()
                 teaDrinks();
                 break;
             default:
-                printf("\n\t\t\tWrong input");
+                printf("\n\t\t\tWrong input\n");
 
             }
 
@@ -112,25 +113,24 @@ int main()
         case 2 :
         {
             system("CLS");
-            currentStatus;
-            break;
-        }
-        case 3 :
-        {
-            system("CLS");
             awaitingFood();
             break;
         }
-        case 4 :
-        {
-            information();
-        }
 
-        case 5 :
+        case 3 :
+        {
+            system("CLS");
+            information();
+            break;
+
+        }
+        case 4 :
         {
             system("CLS");
             Exit();
+            break;
         }
+
         default:
             printf("\n\n\t\t\tWrong input !!!\n");
         }
@@ -186,7 +186,7 @@ level:
 
     char temp;
 
-    printf ("\n\n\t\t\tDo you want to go Main-menu?(y/n)\n ");
+    printf ("\n\n\t\t\tDo you want to go Main-menu? (y/n)  ");
     scanf("%c", &temp);
 
     if (temp == 'y' || temp == 'Y')
@@ -197,20 +197,21 @@ level:
     printf("\n\t\t\t\tTotal cost = %d\n", totalcost);
 
 
-    printf ("\n\t\t\tNumber of food ordered %d\n", p[order_count].number_of_food);
+    printf ("\n\t\t\tNumber of food ordered %d : ", p[order_count].number_of_food);
     loading();
     system("CLS");
-
+    struct signin f;
     printf("\n\n\n");
     printf("\n\t\t\t\t\t****************************************\n");
-    printf("\n\t\t\t\t\t.                                      .\n");
-    printf("\n\t\t\t\t\t. Thank you Mr  %s    for your Order   .\n",p[order_count].name);
-    printf("\n\t\t\t\t\t.                                      .\n");
-    printf("\n\t\t\t\t\t.  your total bill = %d Taka           .\n",totalcost);
-    printf("\n\t\t\t\t\t.                                      .\n");
+    printf("\n\t\t\t\t\t.                                       \n");
+    printf("\n\t\t\t\t\t. Thank you Mr. %s for your Order          \n",f.fname);
+    printf("\n\t\t\t\t\t.                                       \n");
+    printf("\n\t\t\t\t\t.  your total bill = %d Taka            \n",totalcost);
+    printf("\n\t\t\t\t\t.                                       \n");
     printf("\n\t\t\t\t\t****************************************\n");
 
     order_count ++;
+    printf("\n\t\t\tPress any key for Payment Option..");
     getch();
     system("cls");
     printf("\n\t\t\tPLease select payment method.\n");
@@ -251,17 +252,16 @@ int signin()
             loading();
             system("CLS");
             gotoxy(20,6);
-            printf("\tYou have successfully logged in...\n ");
+            printf("\n\t\t\tYou have successfully logged in...\n ");
             //gotoxy(10,8);
             //printf("Welcome to Hungry Panda");
             welcome();
 
             printf("\n\n\n\t\t\tChoose any option : \n");
             printf("\n\n\t\t\t\t\t1. Order\n");
-            printf("\n\t\t\t\t\t2. Current Status\n");
-            printf("\n\t\t\t\t\t3. Awaiting Food\n");
-            printf("\n\t\t\t\t\t4. Quiz & Information\n");
-            printf("\n\t\t\t\t\t5. Exit\n");
+            printf("\n\t\t\t\t\t2. Awaiting Food List\n");
+            printf("\n\t\t\t\t\t3. Quiz & Information\n");
+            printf("\n\t\t\t\t\t4. Exit\n");
         }
         else
         {
@@ -270,7 +270,7 @@ int signin()
             system("CLS");
 
             gotoxy(10,10);
-            printf("Oops! Wrong userID or password.Please enter the correct userID and password\n\n");
+            printf("\n\t\tOops! Wrong userID or password.Please enter the correct userID and password\n\n");
 
             gotoxy(10,2);
             signin();
@@ -313,6 +313,8 @@ int Registration()
 
     loading();
     system("CLS");
+
+
 
     gotoxy(10,6);
     printf("Your User name is %s\n",f.username);
@@ -365,7 +367,7 @@ void Breakfast()
     totalcost += p[order_count].cost;
 
     printf("\n\t\t\tTotal cost = %d\n", totalcost);
-    printf("\n\t\t\tDo you want to go Main-menu ?(y/n)");
+    printf("\n\t\t\tDo you want to go Main-menu ?(y/n) ");
 
     char temp;
     scanf("%c", &temp);
@@ -376,23 +378,25 @@ void Breakfast()
 
     //main();
 
-    printf ("\n\t\t\tNumber of food ordered %d\n", p[order_count].number_of_food);
+    printf ("\n\t\t\tNumber of food ordered : %d ", p[order_count].number_of_food);
     system("CLS");
     loading();
     system("CLS");
 
+
     printf("\n\n\n");
     printf("\n\t\t\t\t\t****************************************\n");
     printf("\n\t\t\t\t\t.                                       \n");
-    printf("\n\t\t\t\t\t. Thank you Mr  %s    for your Order    \n",p[order_count].name);
+    printf("\n\t\t\t\t\t. Thank you Mr.  for your Order          \n");
     printf("\n\t\t\t\t\t.                                       \n");
     printf("\n\t\t\t\t\t.  your total bill = %d Taka            \n",totalcost);
     printf("\n\t\t\t\t\t.                                       \n");
     printf("\n\t\t\t\t\t****************************************\n");
 
     order_count ++;
-
+    printf("\n\t\t\tPress any key for Payment Option.\n");
     getch();
+
     system("cls");
     printf("\n\n\t\tPLease select payment method.\n");
     payment ();
@@ -425,7 +429,7 @@ void lunch()
     p[order_count].number_of_food = n;
     p[order_count].cost = 0;
     p[order_count].number_of_food = 0;
-    printf ("\n\n\t\t\tHow many items you want to order?\n ");
+    printf ("\n\n\t\t\tHow many items you want to order? ");
     scanf ("%d", &n);
     getchar ();
     while(n--)
@@ -440,23 +444,24 @@ void lunch()
     totalcost+=p[order_count].cost;
 
     printf("\n\t\t\tTotal cost = %d\n", totalcost);
-    printf("\n\t\t\tDo you want to go Main-menu ? (y/n)");
+    printf("\n\t\t\tDo you want to go Main-menu ? (y/n) ");
 
     char temp;
     scanf("%c", &temp);
     if (temp == 'y' || temp == 'Y')
         returnMenu();
 
-    printf ("\n\t\t\tNumber of food ordered %d\n", p[order_count].number_of_food);
+    printf ("\n\t\t\tNumber of food ordered : %d ", p[order_count].number_of_food);
     system("CLS");
     loading();
     system("CLS");
     //gotoxy(15,4);
-    printf ("\t\tThank you %s for your order. Your bill is %d taka.\n\n", p[order_count].name,totalcost);
+
+    //printf ("\t\tThank you %s for your order. Your bill is %d taka.\n\n", p[order_count].name,totalcost);
     printf("\n\n\n");
     printf("\n\t\t\t\t\t****************************************\n");
     printf("\n\t\t\t\t\t.                                       \n");
-    printf("\n\t\t\t\t\t. Thank you Mr/Mrs %s for your Order    \n",p[order_count].name);
+    printf("\n\t\t\t\t\t. Thank you Mr.  for your Order          \n");
     printf("\n\t\t\t\t\t.                                       \n");
     printf("\n\t\t\t\t\t.  your total bill = %d Taka            n\n",totalcost);
     printf("\n\t\t\t\t\t.                                       \n");
@@ -464,6 +469,7 @@ void lunch()
 
     order_count ++;
 
+    printf("\n\t\t\tPress any key for Payment Option.\n");
     getch();
     system("cls");
     printf("\n\t\tPLease select payment method.\n");
@@ -491,7 +497,7 @@ void Dinner()
     p[order_count].number_of_food = n;
     p[order_count].cost = 0;
     p[order_count].number_of_food = 0;
-    printf ("\n\t\t\tHow many items you want to order?\n ");
+    printf ("\n\t\t\tHow many items you want to order?  ");
     scanf ("%d", &n);
     getchar ();
     while(n--)
@@ -517,16 +523,18 @@ void Dinner()
     system("CLS");
     loading();
     system("CLS");
+    struct signin f;
     printf("\n\n\n");
     printf("\n\t\t\t\t\t****************************************\n");
     printf("\n\t\t\t\t\t.                                        \n");
-    printf("\n\t\t\t\t\t. Thank you Mr  %s    for your Order     \n",p[order_count].name);
+    printf("\n\t\t\t\t\t. Thank you Mr. For your Order           \n");
     printf("\n\t\t\t\t\t.                                        \n");
     printf("\n\t\t\t\t\t.  your total bill = %d Taka             \n",totalcost);
     printf("\n\t\t\t\t\t.                                        \n");
     printf("\n\t\t\t\t\t****************************************\n");
 
     order_count ++;
+    printf("\n\t\t\tPress any key for Payment Option.\n");
     getch();
     system("cls");
     printf("\n\n\t\tPLease select payment method.\n");
@@ -537,24 +545,24 @@ void Dinner()
 
 void Others()
 {
-    printf("\n\t\t\t\t\t\t\Others\n"
-            "\n\t\t\tCode  Name                                        Price\n"
+    printf("\n\t\t\t\t\t\tOthers\n"
+           "\n\t\t\tCode  Name                                        Price\n"
            "\n\t\t\t1.  Naan---------------------half/full----------- 15/25 |=\n"
            "\n\t\t\t2.  Special Naan-------------half/full----------- 20/40 |=\n"
            "\n\t\t\t3.  Chicken Grill------------half/full----------- 180/350 |= \n"
            "\n\t\t\t4.  Chicken Chap-------------half/full----------- 155/210 |= \n"
            "\n\t\t\t5.  Chicken BBQ--------------half/full----------- 120/240 |=\n"
            "\n\t\t\t6.  Chicken Tikka------------half/full----------- 100/180 |= \n"
-           "\n\t\t\t7.  Chicken Korai------------half/full----------- 55/110 |=\n"
-           "\n\t\t\t8.  Vegetable Fried Rice-----quarter/full-------- 60/240 |=\n"
-           "\n\t\t\t9.  Chicken Fried Rice-------quarter/full-------- 120/480 |=\n");
+           "\n\t\t\t7.  Chicken Korai------------half/full----------- 55/110 |= \n"
+           "\n\t\t\t8.  Vegetable Fried Rice-----quarter/full-------- 60/240 |= \n"
+           "\n\t\t\t9.  Chicken Fried Rice-------quarter/full-------- 120/480 |= \n");
 
     int n, in, qu;
     p[order_count].order_number = 10000+order_count;
     p[order_count].number_of_food = n;
     p[order_count].cost = 0;
     p[order_count].number_of_food = 0;
-    printf ("\n\t\t\tHow many items you want to order?\n ");
+    printf ("\n\t\t\tHow many items you want to order?  ");
     scanf ("%d", &n);
     getchar ();
     while(n--)
@@ -571,7 +579,7 @@ void Others()
 
 
     printf("\n\t\t\tTotal cost = %d\n", totalcost);
-    printf("\n\t\t\tDo you want to go Main-menu? (y/n)");
+    printf("\n\t\t\tDo you want to go Main-menu? (y/n) ");
 
     char temp;
     scanf("%c", &temp);
@@ -582,11 +590,11 @@ void Others()
     system("CLS");
     loading();
     system("CLS");
-
+    struct signin f;
     printf("\n\n\n");
     printf("\n\t\t\t\t\t****************************************\n");
     printf("\n\t\t\t\t\t.                                        \n");
-    printf("\n\t\t\t\t\t. Thank you Mr  %s    for your Order     \n",p[order_count].name);
+    printf("\n\t\t\t\t\t. Thank you Mr. For your Order          \n");
     printf("\n\t\t\t\t\t.                                        \n");
     printf("\n\t\t\t\t\t.  your total bill = %d Taka             \n",totalcost);
     printf("\n\t\t\t\t\t.                                        \n");
@@ -594,6 +602,7 @@ void Others()
 
     order_count ++;
 
+    printf("\n\t\t\tPress any key for Payment Option.\n");
     getch();
     system("cls");
     printf("\n\n\t\tPLease select payment method.\n");
@@ -603,7 +612,7 @@ void Others()
 void  teaDrinks()
 {
     printf("\n\t\t\t\t\t\tTea & Drinks\n"
-            "\n\t\t\tCode  Name                                               Price\n"
+           "\n\t\t\tCode  Name                                               Price\n"
            "\n\t\t\t1.   Tea------------------------------------------------- 15 |=\n"
            "\n\t\t\t2.   Coffee--------------------hot/cold------------------ 30/45 |=\n"
            "\n\t\t\t3.   Cold Drinks---------------250mg/500mg--------------- 20/35 |=\n"
@@ -617,7 +626,7 @@ void  teaDrinks()
     p[order_count].number_of_food = n;
     p[order_count].cost = 0;
     p[order_count].number_of_food = 0;
-    printf ("\n\t\t\tHow many items you want to order?\n ");
+    printf ("\n\t\t\tHow many items you want to order?  ");
     scanf ("%d", &n);
     getchar ();
     while(n--)
@@ -643,11 +652,11 @@ void  teaDrinks()
     system("CLS");
     loading();
     system("CLS");
-
+    struct signin f;
     printf("\n\n\n");
     printf("\n\t\t\t\t\t****************************************\n");
     printf("\n\t\t\t\t\t.                                       \n");
-    printf("\n\t\t\t\t\t. Thank you Mr  %s    for your Order    \n",p[order_count].name);
+    printf("\n\t\t\t\t\t. Thank you Mr. For your Order          \n");
     printf("\n\t\t\t\t\t.                                       \n");
     printf("\n\t\t\t\t\t.  your total bill = %d Taka            \n",totalcost);
     printf("\n\t\t\t\t\t.                                       \n");
@@ -655,6 +664,7 @@ void  teaDrinks()
 
     order_count ++;
 
+    printf("\n\t\t\tPress any key for Payment Option.\n");
     getch();
     system("cls");
     printf("\n\n\t\tPLease select payment method.\n");
@@ -1514,7 +1524,7 @@ int payment()
         }
         printf("\n\t\t\tIf you want to pass your waiting time\n");
         int enter9;
-        printf("\n\t\t\tEnter'1'For Entertainment\n");
+        printf("\n\t\t\tEnter '1' For Entertainment\n");
         scanf("%d",&enter9);
         if(enter9==1)
         {
@@ -1577,6 +1587,7 @@ int payment()
         break;
     case 3:
         main();
+        //returnMenu();
         break;
 
     }
@@ -1609,8 +1620,6 @@ int awaitingFood ()
         printf ("\n\t\t\tNumber of Currently waiting to be served: %d\n", (order_count-served_count));
         printf ("\n\t\t\tCurrently preparing food for order no. %d\n\n", p[served_count].order_number);
     }
-
-
 }
 
 int Exit ()
@@ -1636,7 +1645,8 @@ int Exit ()
             scanf("%d",&enter6);
             if(enter6==1)
             {
-                main();
+                returnMenu();
+                //main();
             }
             else if(enter6==2)
             {
@@ -1653,7 +1663,8 @@ int Exit ()
             scanf("%d",&enter6);
             if(enter6==1)
             {
-                main();
+                returnMenu();
+                //main();
             }
             else if(enter6==2)
             {
@@ -1670,7 +1681,8 @@ int Exit ()
             scanf("%d",&enter6);
             if(enter6==1)
             {
-                main();
+                returnMenu();
+                //main();
             }
             else if(enter6==2)
             {
@@ -1692,7 +1704,8 @@ int Exit ()
             scanf("%d",&enter6);
             if(enter6==1)
             {
-                main();
+                returnMenu();
+                //main();
             }
             else if(enter6==2)
             {
@@ -1709,7 +1722,8 @@ int Exit ()
             scanf("%d",&enter6);
             if(enter6==1)
             {
-                main();
+                returnMenu();
+                //main();
             }
             else if(enter6==2)
             {
@@ -1726,7 +1740,8 @@ int Exit ()
             scanf("%d",&enter6);
             if(enter6==1)
             {
-                main();
+                returnMenu();
+                //main();
             }
             else if(enter6==2)
             {
@@ -1737,27 +1752,26 @@ int Exit ()
         break;
     }
 }
-int  currentStatus ()
+int  currentStatus()
 {
     if (order_count==0)
     {
-        printf("\n\n\n\n");
-        printf ("\n\t\t\tPlease order first\n\n");
-        printf ("\n\n\t\t\tOrder no. %d\n", p[served_count].order_number);
+        printf ("\n\t\t\tPlease order first\n");
+        printf ("\n\t\t\tOrder no. %d\n", p[served_count].order_number);
         int enter8;
-        printf("\n\n\t\t\tEnter'1' :: for Order\n");
+        printf("\n\t\t\tEnter'1'for Order\n");
         scanf("%d",&enter8);
         if(enter8==1)
         {
             returnMenu();
         }
+
     }
-    else if (served_count == order_count)
+    else
     {
-        printf("\n\n\n\n");
         printf ("\n\t\t\tAll order served\n");
-        printf ("\n\t\t\tOrder no. %d by %s is ready\n", p[served_count].order_number, p[served_count].name);
-        printf ("\n\t\t\tEnjoy your meal\n\n");
+        printf ("\n\t\t\tOrder no. %d by is ready\n", p[served_count].order_number);
+
     }
 
     served_count++;
@@ -1769,7 +1783,7 @@ int close()
 int entertainment()
 {
     int enter9;
-    printf("\n\t\t\tEnter'1'For Entertainment\n");
+    printf("\n\t\t\tEnter'1'For Entertainment : ");
     scanf("%d",&enter9);
     if(enter9==1)
     {
@@ -1803,7 +1817,7 @@ int information()
     system("CLS");
     int n,enter12;
 
-    printf("\n\t\t\t1. Trip Advisor\t\t2. News\t\t3. Best Books\t \t4.Back\n");
+    printf("\n\t\t\t1. Trip Advisor\t\t2. News\t\t3. Best Books\t \t4.Back\t\t5.Quiz\n");
     printf("\n\t\t\tEnter any number please : ");
 
     scanf("%d",&n);
@@ -1821,7 +1835,7 @@ int information()
         printf("\n\t\t\t\t\t|----Welcome to EVER GREEN SYLHET ...!!----|\n");
         printf("\n\t\t\t\t\t************************************************\n");
 
-        printf("\n\tEnter any number (3 to infinite)\n");
+        printf("\n\t\tEnter any number (3 to infinite) : ");
 
         int m,n; //local variable
 
@@ -1835,7 +1849,7 @@ int information()
         while(m--)
         {
             printf("\n\n\n\t\t1.  N A T U R E and  P A R K  \t2. O T H E R S ");
-            printf("\n\n\tchose one !!\n");
+            printf("\n\n\tchose one !! --- :  ");
             scanf("%d",&n);
             switch(n)
             {
@@ -1880,7 +1894,7 @@ int information()
         printf("\n\t\t\t\t\t|----Welcome to The News world...!!----|\n");
         printf("\n\t\t\t\t\t************************************************\n");
 
-        printf("\n\n\n\tEnter any number (3 to infinite)\n");
+        printf("\n\n\n\tEnter any number (3 to infinite) : ");
 
         int v,b;
 
@@ -1896,7 +1910,7 @@ int information()
         while(v--)
         {
             printf("\n\n\n\t\t1.Top 10 Football  \t2.Top 10 Movie  \t3.Top 10 On-line Game \n");
-            printf("\n\n\t\tchose one !!\n");
+            printf("\n\n\t\tchose one !! --- : ");
             scanf("%d",&b);
             switch(b)
             {
@@ -1979,9 +1993,8 @@ int information()
                 break;
 
             default:
-                printf("\n\t\terror !! you limit our cross , go home");
+                printf("\n\t\tError !! your Input Wrong ");
             }
-
         };
         break;
 
@@ -1995,7 +2008,7 @@ int information()
         printf("\n\t\t\t\t\t|----- Welcome Book Lover to the zone...!!-----|\n");
         printf("\n\t\t\t\t\t************************************************\n");
 
-        printf("\n\n\tEnter any number (3 to infinite)\n");
+        printf("\n\n\tEnter any number (3 to infinite) : ");
 
         int q,w;
 
@@ -2031,7 +2044,7 @@ int information()
         while(q--)
         {
             printf("\n\n\t1.All Time Top 10 Best Selling Book\t\t2.Bangla Literature\n");
-            printf("\n\n\tchose one !!\n");
+            printf("\n\n\tchose one !! --- : ");
             scanf("%d",&n);
             switch(n)
             {
@@ -2072,9 +2085,10 @@ int information()
         system("CLS");
         entertainment();
         break;
-
-    default:
-        printf("\n\tError 404 !! try again\n");
+    case 5:
+        system("CLS");
+        quize();
+        break;
     }
 
 
@@ -2090,80 +2104,80 @@ int quize()
     scanf("%d",&q1);
     if (q1==1)
     {
-        printf("\n\t\t\tCorrect");
+        printf("\n\t\t\tCorrect\n");
         ++score;
     }
     else if (q1==2)
     {
-        printf("\n\t\t\tWrong.Correct answer is 1");
+        printf("\n\t\t\tWrong.Correct answer is 1\n");
     }
     else if (q1==3)
     {
-        printf("\n\t\t\tWrong.Correct answer is 1");
+        printf("\n\t\t\tWrong.Correct answer is 1\n");
     }
     else
     {
-        printf("\n\t\t\tWrong input");
+        printf("\n\t\t\tWrong input\n");
     }
     printf("\n\t\t\t2.What is the Traditional food of Dhaka?\n\t\t\t"
            "1. Kacchi 2. Haji Biriyani 3. kabab\n");
     scanf("%d",&q2);
     if (q2==2)
     {
-        printf("\n\t\t\tCorrect");
+        printf("\n\t\t\tCorrect\n");
         ++score;
     }
     else if (q2==1)
     {
-        printf("\n\t\t\tWrong.Correct answer is 2");
+        printf("\n\t\t\tWrong.Correct answer is 2\n");
     }
     else if (q2==3)
     {
-        printf("\n\t\t\tWrong.Correct answer is 2");
+        printf("\n\t\t\tWrong.Correct answer is 2\n");
     }
     else
     {
-        printf("\n\t\t\tWrong input");
+        printf("\n\t\t\tWrong input\n");
     }
     printf("\n\t\t\t3.What is the Traditional food of Rangpur?\n\t\t\t"
            "1.Shidal 2.Bharta 3.Mezban\n");
     scanf("%d",&q3);
     if (q3==1)
     {
-        printf("Correct");
+        printf("\n\t\t\tCorrect\n");
         ++score;
     }
     else if (q3==2)
     {
-        printf("\n\t\t\tWrong.Correct answer is 1");
+        printf("\n\t\t\tWrong.Correct answer is 1\n");
     }
     else if (q3==3)
     {
-        printf("\n\t\t\tWrong.Correct answer is 1");
+        printf("\n\t\t\tWrong.Correct answer is 1\n");
     }
     else
     {
-        printf("\n\t\t\tWrong input");
+        printf("\n\t\t\tWrong input\n");
     }
     printf("\n\t\t\t4.What is the famous Dessert of Bogra?\n\t\t\t"
            "1. Chana 2. Dooi 3. Kheer Sagar\n");
     scanf("%d",&q4);
     if (q4==2)
     {
-        printf("\n\t\t\tCorrect");
+        printf("\n\t\t\tCorrect\n");
         ++score;
     }
     else if (q4==1)
     {
-        printf("\n\t\t\tWrong.Correct answer is 2");
+        printf("\n\t\t\tWrong.Correct answer is 2\n");
     }
     else if (q4==3)
     {
-        printf("\n\t\t\tWrong.Correct answer is 2");
+        printf("\n\t\t\tWrong.Correct answer is 2\n");
     }
     else
     {
-        printf("\n\t\t\tWrong input");
+        printf("\n\t\t\tWrong input\n");
     }
 
     printf("\n\t\t\t5.What is the famous curry of Nilphamari?\n\t\t\t"
@@ -2171,16 +2185,16 @@ int quize()
     scanf("%d",&q5);
     if (q5==3)
     {
-        printf("\n\t\t\tCorrect");
+        printf("\n\t\t\tCorrect\n");
         ++score;
     }
     else if (q5==1)
     {
-        printf("\n\t\t\tWrong.Correct answer is 3");
+        printf("\n\t\t\tWrong.Correct answer is 3\n");
     }
     else if (q5==2)
     {
-        printf("\n\t\t\tWrong.Correct answer is 3");
+        printf("\n\t\t\tWrong.Correct answer is 3\n");
     }
     else
     {
@@ -2191,20 +2205,20 @@ int quize()
     scanf("%d",&q6);
     if (q6==2)
     {
-        printf("\n\t\t\tCorrect");
+        printf("\n\t\t\tCorrect\n");
         ++score;
     }
     else if (q6==1)
     {
-        printf("\n\t\t\tWrong.Correct answer is 2");
+        printf("\n\t\t\tWrong.Correct answer is 2\n");
     }
     else if (q6==3)
     {
-        printf("\n\t\t\tWrong.Correct answer is 2");
+        printf("\n\t\t\tWrong.Correct answer is 2\n");
     }
     else
     {
-        printf("\n\t\t\tWrong input");
+        printf("\n\t\t\tWrong input\n");
 
     }
     printf("\n\t\t\t7.What is the famous Sweet of Faridpur?\n\t\t\t"
@@ -2212,20 +2226,20 @@ int quize()
     scanf("%d",&q7);
     if (q7==1)
     {
-        printf("\n\t\t\tCorrect");
+        printf("\n\t\t\tCorrect\n");
         ++score;
     }
     else if (q7==2)
     {
-        printf("\n\t\t\tWrong.Correct answer is 1");
+        printf("\n\t\t\tWrong.Correct answer is 1\n");
     }
     else if (q7==3)
     {
-        printf("\n\t\t\tWrong.Correct answer is 1");
+        printf("\n\t\t\tWrong.Correct answer is 1\n");
     }
     else
     {
-        printf("\n\t\t\tWrong input");
+        printf("\n\t\t\tWrong input\n");
 
     }
 
@@ -2234,83 +2248,83 @@ int quize()
     scanf("%d",&q8);
     if (q8==3)
     {
-        printf("\n\t\t\tCorrect");
+        printf("\n\t\t\tCorrect\n");
         ++score;
     }
     else if (q8==1)
     {
-        printf("\n\t\t\tWrong.Correct answer is 1");
+        printf("\n\t\t\tWrong.Correct answer is 1\n");
     }
     else if (q8==2)
     {
-        printf("\n\t\t\tWrong.Correct answer is 1");
+        printf("\n\t\t\tWrong.Correct answer is 1\n");
     }
     else
     {
-        printf("\n\t\t\tWrong input");
+        printf("\n\t\t\tWrong input\n");
 
     }
-    printf("\n\t\t\t9.Which Place famous for 'Shutki Chatni'?\n"
+    printf("\n\t\t\t9.Which Place famous for 'Shutki Chatni'?\n\t\t\t"
            "1. Netrokona 2. Chattak 3. Kulaura\n");
     scanf("%d",&q9);
     if (q9==3)
     {
-        printf("\n\t\t\tCorrect");
+        printf("\n\t\t\tCorrect\n");
         ++score;
     }
     else if (q9==1)
     {
-        printf("\n\t\t\tWrong.Correct answer is 3");
+        printf("\n\t\t\tWrong.Correct answer is 3\n");
     }
     else if (q9==2)
     {
-        printf("\n\t\t\tWrong.Correct answer is 3");
+        printf("\n\t\t\tWrong.Correct answer is 3\n");
     }
     else
     {
-        printf("\n\t\t\tWrong input");
+        printf("\n\t\t\tWrong input\n");
 
     }
-    printf("\n\t\t\t10.Which Place famous for 'Mango'?\n"
+    printf("\n\t\t\t10.Which Place famous for 'Mango'?\n\t\t\t"
            "1.Chittagong 2.Rajshahi 3.Khulna\n");
     scanf("%d",&q10);
     if (q10==2)
     {
-        printf("\n\t\t\tCorrect");
+        printf("\n\t\t\tCorrect\n");
         ++score;
     }
     else if (q10==1)
     {
-        printf("\n\t\t\tWrong.Correct answer is 2");
+        printf("\n\t\t\tWrong.Correct answer is 2\n");
     }
     else if (q10==3)
     {
-        printf("\n\t\t\tWrong.Correct answer is 2");
+        printf("\n\t\t\tWrong.Correct answer is 2\n");
     }
     else
     {
-        printf("\n\t\t\tWrong input");
+        printf("\n\t\t\tWrong input\n");
 
     }
-    printf("\n\t\t\t11.Kustiya is famous for is dessert?\n"
+    printf("\n\t\t\t11.Kustiya is famous for is dessert?\n\t\t\t"
            "1. Malai cha 2. Malai kulfi 3. Ice Cream\n");
     scanf("%d",&q11);
     if (q11==2)
     {
-        printf("\n\t\t\tCorrect");
+        printf("\n\t\t\tCorrect\n");
         ++score;
     }
     else if (q11==1)
     {
-        printf("\n\t\t\tWrong.Correct answer is 2");
+        printf("\n\t\t\tWrong.Correct answer is 2\n");
     }
     else if (q11==3)
     {
-        printf("\n\t\t\tWrong.Correct answer is 2");
+        printf("\n\t\t\tWrong.Correct answer is 2\n");
     }
     else
     {
-        printf("\n\t\t\tWrong input");
+        printf("\n\t\t\tWrong input\n");
 
     }
     printf("\n\t\t\t12.What is the famous food in Chittagong?\n\t\t\t"
@@ -2318,62 +2332,62 @@ int quize()
     scanf("%d",&q12);
     if (q12==1)
     {
-        printf("\n\t\t\tCorrect");
+        printf("\n\t\t\tCorrect\n");
         ++score;
     }
     else if (q12==2)
     {
-        printf("\n\t\t\tWrong.Correct answer is 1");
+        printf("\n\t\t\tWrong.Correct answer is 1\n");
     }
     else if (q12==3)
     {
-        printf("\n\t\t\tWrong.Correct answer is 1");
+        printf("\n\t\t\tWrong.Correct answer is 1\n");
     }
     else
     {
-        printf("\n\t\t\tWrong input");
+        printf("\n\t\t\tWrong input\n");
 
     }
-    printf("\n\t\t\t13.Which Place is famous for 'Bamboo Chicken'?\n"
+    printf("\n\t\t\t13.Which Place is famous for 'Bamboo Chicken'?\n\t\t\t"
            "1. Ragnamati 2. Cox-bazar 3. Dhaka\n");
     scanf("%d",&q13);
     if (q13==1)
     {
-        printf("\n\t\t\tCorrect");
+        printf("\n\t\t\tCorrect\n");
         ++score;
     }
     else if (q13==2)
     {
-        printf("\n\t\t\tWrong.Correct answer is 1");
+        printf("\n\t\t\tWrong.Correct answer is 1\n");
     }
     else if (q13==3)
     {
-        printf("\n\t\t\tWrong.Correct answer is 1");
+        printf("\n\t\t\tWrong.Correct answer is 1\n");
     }
     else
     {
-        printf("\n\t\t\tWrong input");
+        printf("\n\t\t\tWrong input\n");
 
     }
-    printf("\n\t\t\t14. What is the famoud sweet of Maymanshingh?\n"
+    printf("\n\t\t\t14. What is the famoud sweet of Maymanshingh?\n\t\t\t"
            "1. Kalojam 2. Balish misthi 3. Kheer sagor\n");
     scanf("%d",&q14);
     if (q14==2)
     {
-        printf("\n\t\t\tCorrect");
+        printf("\n\t\t\tCorrect\n");
         ++score;
     }
     else if (q14==1)
     {
-        printf("\n\t\t\tWrong.Correct answer is 2");
+        printf("\n\t\t\tWrong.Correct answer is 2\n");
     }
     else if (q14==3)
     {
-        printf("\n\t\t\tWrong.Correct answer is 2");
+        printf("\n\t\t\tWrong.Correct answer is 2\n");
     }
     else
     {
-        printf("\n\t\t\tWrong input");
+        printf("\n\t\t\tWrong input\n");
 
     }
     printf("\n\t\t\t15. Candpur is famous for which fish?\n\t\t\t"
@@ -2381,20 +2395,20 @@ int quize()
     scanf("%d",&q15);
     if (q15==2)
     {
-        printf("\n\t\t\tCorrect");
+        printf("\n\t\t\tCorrect\n");
         ++score;
     }
     else if (q15==1)
     {
-        printf("\n\t\t\tWrong.Correct answer is 2");
+        printf("\n\t\t\tWrong.Correct answer is 2\n");
     }
     else if (q15==3)
     {
-        printf("\n\t\t\tWrong.Correct answer is 2");
+        printf("\n\t\t\tWrong.Correct answer is 2\n");
     }
     else
     {
-        printf("\n\t\t\tWrong input");
+        printf("\n\t\t\tWrong input\n");
 
     }
     printf("\n\t\t\t16 Khulana is famous for wich dish?\n\t\t\t"
@@ -2402,20 +2416,20 @@ int quize()
     scanf("%d",&q16);
     if (q16==1)
     {
-        printf("\n\t\t\tCorrect");
+        printf("\n\t\t\tCorrect\n");
         ++score;
     }
     else if (q16==2)
     {
-        printf("\n\t\t\tWrong.Correct answer is 1");
+        printf("\n\t\t\tWrong.Correct answer is 1\n");
     }
     else if (q16==3)
     {
-        printf("\n\t\t\tWrong.Correct answer is 1");
+        printf("\n\t\t\tWrong.Correct answer is 1\n");
     }
     else
     {
-        printf("\n\t\t\tWrong input");
+        printf("\n\t\t\tWrong input\n");
 
     }
     printf("\n\t\t\t17.Tangail is famous for?\n\t\t\t"
@@ -2423,20 +2437,20 @@ int quize()
     scanf("%d",&q17);
     if (q17==1)
     {
-        printf("\n\t\t\tCorrect");
+        printf("\n\t\t\tCorrect\n");
         ++score;
     }
     else if (q17==2)
     {
-        printf("\n\t\t\tWrong.Correct answer is 1");
+        printf("\n\t\t\tWrong.Correct answer is 1\n");
     }
     else if (q17==3)
     {
-        printf("\n\t\t\tWrong.Correct answer is 1");
+        printf("\n\t\t\tWrong.Correct answer is 1\n");
     }
     else
     {
-        printf("\n\t\t\tWrong input");
+        printf("\n\t\t\tWrong input\n");
 
     }
     printf("\n\t\t\t18.Which Plcae is famus for 'KACHAGOLLA'?\n\t\t\t"
@@ -2444,20 +2458,20 @@ int quize()
     scanf("%d",&q18);
     if (q18==2)
     {
-        printf("\n\t\t\tCorrect");
+        printf("\n\t\t\tCorrect\n");
         ++score;
     }
     else if (q18==1)
     {
-        printf("\n\t\t\tWrong.Correct answer is 2");
+        printf("\n\t\t\tWrong.Correct answer is 2\n");
     }
     else if (q18==3)
     {
-        printf("\n\t\t\tWrong.Correct answer is 2");
+        printf("\n\t\t\tWrong.Correct answer is 2\n");
     }
     else
     {
-        printf("\n\t\t\tWrong input");
+        printf("\n\t\t\tWrong input\n");
 
     }
     printf("\n\t\t\t19.Comilla is famous for?\n\t\t\t"
@@ -2465,20 +2479,20 @@ int quize()
     scanf("%d",&q19);
     if (q19==3)
     {
-        printf("\n\t\t\tCorrect");
+        printf("\n\t\t\tCorrect\n");
         ++score;
     }
     else if (q19==1)
     {
-        printf("\n\t\t\tWrong.Correct answer is 3");
+        printf("\n\t\t\tWrong.Correct answer is 3\n");
     }
     else if (q19==2)
     {
-        printf("\n\t\t\tWrong.Correct answer is 3");
+        printf("\n\t\t\tWrong.Correct answer is 3\n");
     }
     else
     {
-        printf("\n\t\t\tWrong input");
+        printf("\n\t\t\tWrong input\n");
 
     }
     printf("\n\t\t\t20.Whta is the Traditional Food of Sylhet?\n\t\t\t"
@@ -2487,20 +2501,20 @@ int quize()
 
     if (q20==1)
     {
-        printf("\n\t\t\tCorrect");
+        printf("\n\t\t\tCorrect\n");
         ++score;
     }
     else if (q20==2)
     {
-        printf("\n\t\t\tWrong.Correct answer is 1");
+        printf("\n\t\t\tWrong.Correct answer is 1\n");
     }
     else if (q20==3)
     {
-        printf("\n\t\t\tWrong.Correct answer is 1");
+        printf("\n\t\t\tWrong.Correct answer is 1\n");
     }
     else
     {
-        printf("\n\t\t\tWrong input");
+        printf("\n\t\t\tWrong input\n");
 
     }
     printf("\n\t\t\tYour score is %d of 20",score);
@@ -2554,35 +2568,36 @@ void  logIn()
 }
 
 //our name
-/*
+
 void contributor()
 {
 
     printf("\n\n\n\n");
-        printf("\t\t\t===================---------------------------------------------====================\n");
-        printf("\t\t\t*.                                                                                .*\n");
-        printf("\t\t\t*.                              Team Ragnkar                                      .*\n");
-        printf("\t\t\t*.                                                                                .*\n");
-        printf("\t\t\t*.                                                                                .*\n");
-        printf("\t\t\t ...................................................................................\n");
-        printf("\t\t\t.                                                                                  .\n");
-        printf("\t\t\t.                          C O N T R I B U T O R                                   .\n");
-        printf("\t\t\t.                                                                                  .\n");
-        printf("\t\t\t*********.                                                                .*********\n");
-        printf("\t\t\t*********.             1. MD. SAJJADUR RAHMAN  ------ 299                 .*********\n");
-        printf("\t\t\t*********.                                                                .*********\n");
-        printf("\t\t\t********.              2. ARNOB LASKAR        --------303                  .********\n");
-        printf("\t\t\t*******.                                                                    .*******\n");
-        printf("\t\t\t******.                3. MD. ASADULLAH-AL-GALIB ----303                     .******\n");
-        printf("\t\t\t*****.                                                                        .*****\n");
-        printf("\t\t\t****.                  4. CHINMOY DATTA PRIOM    ----311                       .****\n");
-        printf("\t\t\t***.                                                                            .***\n");
-        printf("\t\t\t**.                                                                              .**\n");
-        printf("\t\t\t*.                                                                                .*\n");
-        printf("\t\t\t*. ................................................................................*\n");
-        printf("\t\t\t*.                                                                                .*\n");
-        printf("\t\t\t*.                       Digital Food Business  Service                           .*\n");
-        printf("\t\t\t*.                                                                                .*\n");
-        printf("\t\t\t************************************************************************************\n");
+    printf("\t\t\t===================---------------------------------------------====================\n");
+    printf("\t\t\t*.                                                                                .*\n");
+    printf("\t\t\t*.                              Team RAGNAROK                                      .*\n");
+    printf("\t\t\t*.                                                                                .*\n");
+    printf("\t\t\t*.                                                                                .*\n");
+    printf("\t\t\t ...................................................................................\n");
+    printf("\t\t\t.                                                                                  .\n");
+    printf("\t\t\t.                          C O N T R I B U T O R                                   .\n");
+    printf("\t\t\t.                                                                                  .\n");
+    printf("\t\t\t*********.                                                                .*********\n");
+    printf("\t\t\t*********.             1. MD. SAJJADUR RAHMAN  ------ 299                 .*********\n");
+    printf("\t\t\t*********.                                                                .*********\n");
+    printf("\t\t\t********.              2. ARNOB LASKAR        --------303                  .********\n");
+    printf("\t\t\t*******.                                                                    .*******\n");
+    printf("\t\t\t******.                3. MD. ASADULLAH-AL-GALIB -----303                     .******\n");
+    printf("\t\t\t*****.                                                                        .*****\n");
+    printf("\t\t\t****.                  4. CHINMOY DATTA PRIOM    -----311                       .****\n");
+    printf("\t\t\t***.                                                                            .***\n");
+    printf("\t\t\t**.                                                                              .**\n");
+    printf("\t\t\t*.                                                                                .*\n");
+    printf("\t\t\t*. ................................................................................*\n");
+    printf("\t\t\t*.                                                                                .*\n");
+    printf("\t\t\t*.                       Digital Food Business  Platform                           .*\n");
+    printf("\t\t\t*.                                                                                .*\n");
+    printf("\t\t\t************************************************************************************\n");
 }
-*/
+
+

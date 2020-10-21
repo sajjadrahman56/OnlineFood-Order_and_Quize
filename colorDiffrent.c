@@ -9,11 +9,11 @@
 
 int main()
 {
-    system("COLOR FC");
+    system("COLOR F1");
     printf("Welcome to the color changing application!\n");
     printf("Press any key to change the background color!\n");
     getch();
-    system("COLOR 6C");
+    system("COLOR F3");
     printf("Now the background color is Yellow and Text Color is light Red\n");
     printf("Press any key to exit...");
     getch();
