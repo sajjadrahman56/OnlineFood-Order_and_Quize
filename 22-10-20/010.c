@@ -5,6 +5,8 @@
 #include <windows.h>
 
 void welcome();
+int signin();
+int Registration();
 void  logIn();
 void backMenu();
 
@@ -28,8 +30,7 @@ int close();
 void contributor();
 /*re call all order function */
 int  returnMenu();
-int signin();
-int Registration();
+
 
 struct order
 {
