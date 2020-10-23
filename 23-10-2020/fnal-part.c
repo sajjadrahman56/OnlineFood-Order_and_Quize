@@ -1394,6 +1394,7 @@ int loading()
 
 int payment()
 {
+    int money ;
     int card,cash,enter5,enter7,code,pt;
     system ("COLOR 2");
     //gotoxy(20,10);
@@ -1429,8 +1430,12 @@ int payment()
             //puts("Enter your code:");
             printf("\n\t\t\tEnter your code : ");
             scanf("%d",&code);
-            loading();
-            system("CLS");
+            printf("\n\t\tYour amount : ");
+            scanf("%d",&money);
+            printf("\n\t\tChange = %d", money - totalcost);
+            getch();
+            //loading();
+            //system("CLS");
         }
         if(enter5==2)
         {
@@ -1500,8 +1505,9 @@ int payment()
             system("CLS");
             payment();
         }
-        system("CLS");
+        //system("CLS");
         //puts("Your Food is on the way please wait 20 minutes.");
+        getch();
         printf("\n\n\n\t\t\tYour Food is on the way please wait 20 minutes.");
 
         printf("\n\n\n");
