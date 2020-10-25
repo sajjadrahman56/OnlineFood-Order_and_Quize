@@ -217,8 +217,6 @@ level:
     system("cls");
     printf("\n\t\t\tPLease select payment method.\n");
     payment ();
-
-
 }
 
 void gotoxy(int x,int y)   //  use  cordinate
