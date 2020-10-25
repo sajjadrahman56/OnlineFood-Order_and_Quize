@@ -100,8 +100,11 @@ int signin()
     struct signin f;
 
     gotoxy(20,3);
-    printf("UserName: ");
-
+   // printf("UserName: ");
+   // printf("UserName: ");
+    printf("\n\t\t\t.         |.........................................\n"
+           "\n\t\t\t. UserName:                                         .\n"
+           "\n\t\t\t.         |.........................................\n");
     scanf("%s",&username);
     gotoxy(20,6);
     printf("Password: ");
@@ -198,22 +201,30 @@ int Registration()
 void  logIn()
 {
     system("CLS");
-    gotoxy(40,4);
+    gotoxy(40,6);
     printf("Some Information :-");
 
-    gotoxy(10,6);
+    gotoxy(30,12);
     printf("=> For the very first time you must be REGISTRATION  and later on  SIGN IN option work");
 
-    gotoxy(10,8);
+    gotoxy(30,15);
     printf("=> Be careful !!  when you  Input your name  and your password ");
 
-    gotoxy(10,10);
+    gotoxy(30,18);
     printf("=> Your user name is Your User ID");
 
-    gotoxy(10,12);
+    gotoxy(30,21);
     printf("=> Note that 'You can only Registration one device for one Account'");
 
 
-    gotoxy(10,16);
-    printf("Press 1 : Registration \t Press 2 : Sign in\n");
+    //gotoxy(30,28);
+    printf("\n\n\n\n\n\n\t\t\t********************************************\n"
+           "\n\t\t\t.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~."
+           "\n\t\t\t.                                                     ."
+           "\n\t\t\t.                                                      ."
+           "\n\t\t\t.Press 1 : Registration \tPress 2 : Sign in            ."
+            "\n\t\t\t.                                                     ."
+           "\n\t\t\t.                                                      ."
+           "\n\t\t\t*******************************************************.\n"
+           );
 }
