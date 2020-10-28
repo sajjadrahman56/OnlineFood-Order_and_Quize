@@ -142,15 +142,16 @@ int main()
 int  returnMenu()
 {
     int n, in, qu;
-    p[order_count].order_number = 10000+order_count;
+   /* p[order_count].order_number = 10000+order_count;
 
     p[order_count].number_of_food = n;
     p[order_count].cost = 0;
     p[order_count].number_of_food = 0;
-
+*/
 level:
-
-    printf("\n\n\t\t  1: BreakFast  2: Lunch  3: Dinner  4: Others  5: Tea And Drinks \n\t\t\t");
+    system("CLS");
+    printf("\n\n\n\n\n\t\t  1: BreakFast  2: Lunch  3: Dinner  4: Others  5: Tea And Drinks");
+    printf("\n\n\t\t Press any key : ");
     scanf ("%d", &in);
     getchar();
     switch(in)
@@ -253,16 +254,17 @@ int signin()
             loading();
             system("CLS");
             gotoxy(20,6);
-            printf("\n\t\t\tCongratulations!! You have successfully logged in...\n ");
+            printf("\n\t\t\tCongratulations !! You have successfully logged in...\n ");
 
             //("Welcome to Hungry Panda");
             welcome();
 
-            printf("\n\n\n\t\t\tChoose any option : ");
-            printf("\n\n\t\t\t\t\t1. Order\n");
-            printf("\n\t\t\t\t\t2. Awaiting Food List\n");
-            printf("\n\t\t\t\t\t3. Information & Quiz \n");
-            printf("\n\t\t\t\t\t4. Exit\n");
+            printf("\n\n\n\n\t\t\tChoose any option : ");
+            printf("\n\t\t\t\t\t\t1. Order\n");
+            printf("\n\t\t\t\t\t\t2. Awaiting Food List\n");
+            printf("\n\t\t\t\t\t\t3. Information & Quiz \n");
+            printf("\n\t\t\t\t\t\t4. Exit\n");
+            printf("\n\t\t\tPress any key : ");
         }
         else
         {
@@ -1644,11 +1646,11 @@ int awaitingFood ()
         printf ("\n\t\t\tNumber of Currently waiting to be served: %d\n", (order_count-served_count));
         printf ("\n\t\t\tCurrently preparing food for order no. %d\n\n", p[served_count].order_number);
 
-        printf("\n\t For order Press : 1\n");
+        printf("\n\t\t For order Press : [1]  = ");
         int p;
         scanf("%d",&p);
 
-        if(p==1)
+        if(p == 1)
             returnMenu();
     }
 
