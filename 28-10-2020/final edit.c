@@ -2660,7 +2660,8 @@ void  logIn()
 
 
     gotoxy(10,16);
-    printf("Press 1 : Registration \t Press 2 : Sign in\n");
+    printf("Press 1 : Registration \t Press 2 : Sign in \n");
+    printf("\n\n\t  Press one option  = ");
 }
 
 //Team members name name
