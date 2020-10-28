@@ -286,27 +286,27 @@ int Registration()
     HungryPanda=fopen("HungryPanda1.txt","w");
     struct signin f;
 
-    gotoxy(10,6);
+    gotoxy(40,6);
     printf("Enter Frist name: ");
     scanf("%s",f.fname);
 
-    gotoxy(10,8);
+    gotoxy(40,8);
     printf("Enter Last name: ");
     scanf("%s",f.lname);
 
-    gotoxy(10,10);
+    gotoxy(40,10);
     printf("Enter username: ");
     scanf("%s",f.username);
 
-    gotoxy(10,12);
+    gotoxy(40,12);
     printf("Enter your address: ");
     scanf("%s",f.address);
 
-    gotoxy(10,14);
+    gotoxy(40,14);
     printf("Enter your Number: ");
     scanf("%s",f.number);
 
-    gotoxy(10,16);
+    gotoxy(40,16);
     printf("Enter your password: ");
     scanf("%s",f.password);
     fwrite(&f,sizeof(f),1,HungryPanda);
@@ -315,16 +315,14 @@ int Registration()
     loading();
     system("CLS");
 
+    printf("\n\n\n");
+    printf("\n\n\n\n\n\n\t\t\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    printf("\n\n\t\t\tYour User name is : ' %s ' ",f.username);
 
+    printf("\n\n\t\t\tNow Sign-in to Hungry Panda with your userID and password");
+    printf("\n\n\t\t\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
-    gotoxy(10,6);
-    printf("Your User name is %s\n",f.username);
-
-    gotoxy(10,8);
-    printf("Now Sign-in to Hungry Panda with your userID and password");
-
-    gotoxy(10,10);
-    printf("Press any key to continue : ...");
+    printf("\n\n\n\t\t\tPress any key to continue : ...");
 
     getch();
     system("CLS");
