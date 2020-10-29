@@ -1872,19 +1872,17 @@ int information()
         printf("\n\t\t\t\t\t|----Welcome to EVER GREEN SYLHET ...!!----|\n");
         printf("\n\t\t\t\t\t************************************************\n");
 
-        printf("\n\tEnter any number (3 to infinite)\n");
+
 
         int m,n; //local variable
 
-        scanf("%d",&m);
+
         printf("\n");
 
         char *naturePark[]= {"Ratargul Swamp Forest","Bisnakandi\t\t","Jaflong\t\t","Lalakhal\t\t","Khadimnagar National Park","Tilagor Eco Park\t","Sreemangol Tea Garden","Madavkundo\t\t","Malnichara Tea state","Lakkatura Tea Garden"};
 
         char *others[] = {"Shahi Edgah","Shajalal Mazar","Surma Bridge","Kadir Bazar Bridge","King Bridge and Ali Amzad clock","Pantumai Waterfall","Rema-kalenga Wildlife","Adventure World","Osmani Museum","Osmani Park","Dreamlend","Jakariya City"};
 
-        while(m--)
-        {
             printf("\n\n\n\t\t1.  N A T U R E and  P A R K  \t2. O T H E R S ");
             printf("\n\n\tchose one !!\n");
             scanf("%d",&n);
@@ -1923,7 +1921,7 @@ int information()
             getch();
             system("CLS");
             backMenu();
-        };
+
         break;
 
     case 2:
@@ -1935,11 +1933,11 @@ int information()
         printf("\n\t\t\t\t\t|----Welcome to The News world...!!----|\n");
         printf("\n\t\t\t\t\t************************************************\n");
 
-        printf("\n\n\n\tEnter any number (3 to infinite)\n");
+        //printf("\n\n\n\tEnter any number (3 to infinite)\n");
 
         int v,b;
 
-        scanf("%d",&v);
+
 
         char *namer[]= {"FOOTBALLAR","MOVIE","ONLINE GAME"};
 
@@ -1948,7 +1946,7 @@ int information()
             printf("\t%d. = %s\t",i+1,namer[i]);
         }
 
-        while(v--)
+
         {
             printf("\n\n\n\t\t1.Top 10 Football  \t2.Top 10 Movie  \t3.Top 10 On-line Game \n");
             printf("\n\n\t\tchose one !!\n");
@@ -2058,11 +2056,11 @@ int information()
         printf("\n\t\t\t\t\t|----- Welcome Book Lover to the zone...!!-----|\n");
         printf("\n\t\t\t\t\t************************************************\n");
 
-        printf("\n\n\tEnter any number (3 to infinite)\n");
+        //printf("\n\n\tEnter any number (3 to infinite)\n");
 
         int q,w;
 
-        scanf("%d",&q);
+        //scanf("%d",&q);
         printf("\n");
 
 
@@ -2091,10 +2089,10 @@ int information()
                                  "Lalshalu                                      ",
                                  "Hazar Bosor Dore                              "
                                 };
-        while(q--)
-        {
+      //  while(q--)
+
             printf("\n\n\t1.All Time Top 10 Best Selling Book\t\t2.Bangla Literature\n");
-            printf("\n\n\tchose one !!\n");
+            printf("\n\n\tchose one = ");
             scanf("%d",&n);
             switch(n)
             {
@@ -2133,7 +2131,7 @@ int information()
             system("CLS");
             backMenu();
 
-        };
+
         break;
     case 4:
         system("CLS");
