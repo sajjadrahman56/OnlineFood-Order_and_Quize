@@ -273,9 +273,9 @@ int signin()
             system("CLS");
 
             gotoxy(10,10);
-            printf("\n\t\tOops! Wrong userID or password.Please enter the correct userID and password\n\n");
+            printf("\n\n\t\tOops! Wrong userID or password.Please enter the correct userID and password\n\n");
 
-            gotoxy(10,2);
+            gotoxy(10,4);
             signin();
         }
     }
