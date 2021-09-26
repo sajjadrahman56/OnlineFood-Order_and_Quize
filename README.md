@@ -1,4 +1,3 @@
-# c-lab-project
+# c--project
 It all about a restrurent manangement sytem and payment
-
-Participate Arnob , Galib(Team Leader),Priyom and Md Sajjad
+Participate guys Arnob , Galib(Team Leader),Priyom and Md Sajjad
